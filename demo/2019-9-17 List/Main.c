@@ -2,10 +2,18 @@
 #include "ListBase.h"
 
 int main(){
-	printf("YES!");
+	printf("Start!\n");
 	List test;
+	ListEnum num;
 	InitList(&test,100);
-	GenerateList(&test);
+	scanf("%d", &num);
+	AddEnumToList(&test, num);
+	scanf("%d", &num);
+	AddEnumToList(&test, num);
+	scanf("%d", &num);
+	AddEnumToList(&test, num);
+	PrintList(&test);
+	RemoveEnumFromList(&test, 1);
 	PrintList(&test);
 }
 
