@@ -1,21 +1,21 @@
 
-/////////Í·ÎÄ¼ş//////
+/////////å¤´æ–‡ä»¶//////
 #pragma once
 #include  <stdio.h>
 #include  <stdlib.h>
-/////////Í·ÎÄ¼ş//////
+/////////å¤´æ–‡ä»¶//////
 
-/////////ºê/////////
+/////////å®/////////
 #define  TRUE  1
 #define  FALSE 0
 
 
-/////////ºê/////////
+/////////å®/////////
 
-////////ÀàĞÍ////////
+////////ç±»å‹////////
 typedef int ListEnum;
 
-//ListÄ£°å
+//Listæ¨¡æ¿
 typedef struct list {
 	ListEnum *Enum;
 	int Length;
@@ -24,10 +24,10 @@ typedef struct list {
 
 
 
-////////ÀàĞÍ////////
+////////ç±»å‹////////
 
 
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 static int InitList(List*_list,int _sizeOfList)
 {
 	_list->Size = _sizeOfList;
@@ -42,7 +42,7 @@ static int InitList(List*_list,int _sizeOfList)
 	return 0;
 }
 
-//Éú³ÉList£¬ÓÃ0ÌîÂú
+//ç”ŸæˆListï¼Œç”¨0å¡«æ»¡
 static int GenerateList(List* _list)
 {
 	for(int i=0;i<_list->Length;i++)
@@ -52,7 +52,7 @@ static int GenerateList(List* _list)
 	return 0;
 }
 
-//´òÓ¡ListÄÚËùÓĞÔªËØ
+//æ‰“å°Listå†…æ‰€æœ‰å…ƒç´ 
 static int PrintList(List* _list)
 {
 	printf("Show List:");
@@ -64,7 +64,7 @@ static int PrintList(List* _list)
 	return 0;
 }
 
-//Ìí¼ÓÔªËØ
+//æ·»åŠ å…ƒç´ 
 static int AddEnumToList(List* _list,ListEnum _enum)
 {
 	_list->Enum[_list->Length] = _enum;
@@ -72,7 +72,7 @@ static int AddEnumToList(List* _list,ListEnum _enum)
 	return 0;
 }
 
-//ÒÆ³ıµÚi¸öÔªËØ
+//ç§»é™¤ç¬¬iä¸ªå…ƒç´ 
 static int RemoveEnumFromList(List* _list,int _num)
 {
 	_num --;
