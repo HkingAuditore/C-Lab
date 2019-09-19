@@ -27,7 +27,7 @@ typedef  struct  singleLinkList {
 ///////////////函  数//////////////////
 
 //生成节点
-SingleLinkListNode* CreateNode(ListEnum _data)
+static SingleLinkListNode* CreateNode(ListEnum _data)
 {
 	SingleLinkListNode *node;
 	if ((node = (SingleLinkListNode*)malloc(sizeof(SingleLinkListNode))))
