@@ -7,6 +7,11 @@ int main()
 	SingleLinkList *test;
 	test = GenerateLinkList(20);
 	ReadWholeLinkListData(test);
-	free(test);
+	printf("/******************/\n");
+	InsertNode2LinkList(test, 10, CreateNode(99));
+	ReadWholeLinkListData(test);
+	printf("/******************/\n");
+	test=DestroyLinkList(test);
+	ReadWholeLinkListData(test);
 	return 0;
 }

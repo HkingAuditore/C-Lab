@@ -10,14 +10,13 @@
 ///<summary>
 
 
-///<summary>任务栏///////////////
+//////////////////////////////////////任务栏///////////////////////////////////////////
+///TODOCLAB#1 这运行也太卡了，啥情况			--2019-9-21 01:03:47
+///TODOCLAB#2 没有写销毁链表的方法			--2019-9-21 01:05:36            ***DONE***
+///TODOCLAB#3 插入方法需要优化				--2019-9-21 12:17:02
 ///
 ///
-//TODOCLAB#1 这运行也太卡了，啥情况			--2019-9-21 01:03:47
-//TODOCLAB#2 没有写销毁链表的方法			--2019-9-21 01:05:36
-//
-//
-///<summary>///////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////头文件//////////////////
 
@@ -74,8 +73,6 @@ static int AddNode(ListEnum _data,SingleLinkList* _list)
 	}
 	_list->Tail = node2Add;
 	_list->Length++;
-	// printf("	newnode.data=%d\n", node2Add->Data);
-	// printf("	tailnode.data=%d\n", _list->Tail->Data);
 	return  1;
 }
 
@@ -99,13 +96,11 @@ static SingleLinkList* GenerateEmptyLinkList()
 
 static SingleLinkList* GenerateLinkList(int _numOfNode)
 {
-	//准备工作
 	SingleLinkList *list;
 	if(list = GenerateEmptyLinkList())
 	{
 		for (int i = 1; i <= _numOfNode; i++)
 		{
-			// printf("		No.%d:", i);
 			AddNode(i, list);
 		}
 		return list;
@@ -117,12 +112,52 @@ static SingleLinkList* GenerateLinkList(int _numOfNode)
 //读取链表里所有的数据
 static int ReadWholeLinkListData(SingleLinkList* _list)
 {
-	SingleLinkListNode* curPos = _list->Head->Next;
-	for(int i=1;i<=_list->Length;i++)
+	if (_list) {
+		SingleLinkListNode* curPos = _list->Head->Next;
+		for (int i = 1; i <= _list->Length; i++)
+		{
+			printf("Num.%d:%d\n", i, curPos->Data);
+			curPos = curPos->Next;
+		}
+		return 1;
+	}else
 	{
-		printf("Num.%d:%d\n", i, curPos->Data);
+		printf("Empty List!!!");
+		return 0;
+	}
+}
+
+//销毁链表
+static SingleLinkList* DestroyLinkList(SingleLinkList* _list)
+{
+	SingleLinkListNode* curPos = _list->Head->Next;
+	SingleLinkListNode* destroyPos = _list->Head;
+	while(curPos->Next)
+	{
+		free(destroyPos);
+		destroyPos = curPos;
 		curPos = curPos->Next;
 	}
+	free(destroyPos);
+	free(curPos);
+	free(_list);
+	return NULL;
+}
+
+//插入数据
+//TODOCLAB#3 插入方法需要优化		--2019-9-21 12:17:02
+static int InsertNode2LinkList(SingleLinkList* _list,int _num2Insert,struct singleLinkListNode* _node2Insert)
+{
+	SingleLinkListNode* curPos=_list->Head;
+	for(int i=1;i<=_num2Insert;i++)
+	{
+		curPos = curPos->Next;
+	}
+	SingleLinkListNode* nextPos = curPos->Next;
+	curPos->Next = _node2Insert;
+	_node2Insert->Next = nextPos;
+	_list->Length++;
+	return 1;
 }
 
 
