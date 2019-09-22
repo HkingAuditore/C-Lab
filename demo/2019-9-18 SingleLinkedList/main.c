@@ -4,11 +4,13 @@
 
 int main()
 {
-	SingleLinkList *test;
-	test = GenerateLinkList(20);
+	SingleLinkList *test= GenerateLinkList(20);
 	ReadWholeLinkListData(test);
 	printf("/******************/\n");
 	InsertNode2LinkList(test, 10, CreateNode(99));
+	ReadWholeLinkListData(test);
+	printf("/******************/\n");
+	DeleteNode(test, 5);
 	ReadWholeLinkListData(test);
 	printf("/******************/\n");
 	test=DestroyLinkList(test);

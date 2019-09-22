@@ -160,5 +160,33 @@ static int InsertNode2LinkList(SingleLinkList* _list,int _num2Insert,struct sing
 	return 1;
 }
 
+//获取目标node地址
+static SingleLinkListNode* GetNode(SingleLinkList* _list,int _num2Get)
+{
+	SingleLinkListNode* curPos = _list->Head;
+	if (_num2Get>_list->Length)
+	{
+		return NULL;
+	}
+	for(int i=1;i<=_num2Get;i++)
+	{
+		curPos = curPos->Next;
+	}
+	return curPos;
+}
+
+//删除节点
+static int DeleteNode(SingleLinkList* _list,int _num2Delete)
+{
+	SingleLinkListNode* curPos = GetNode(_list, _num2Delete-1);
+	if (!(curPos->Next))return 0;
+	SingleLinkListNode* node2Delete = curPos->Next;
+	curPos->Next = curPos->Next->Next;
+	_list->Length--;
+	
+	free(node2Delete);
+
+	return 1;
+}
 
 ///////////////函  数//////////////////
