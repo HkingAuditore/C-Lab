@@ -189,4 +189,7 @@ static int DeleteNode(SingleLinkList* _list,int _num2Delete)
 	return 1;
 }
 
+
+
+
 ///////////////º¯  Êý//////////////////
