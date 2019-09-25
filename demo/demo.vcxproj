@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-9-18 SingleLinkedList\main.c" />
-    <ClCompile Include="PolynomialMerging\PolynomialMerging.c" />
+    <ClInclude Include="2019-9-25 Stack\ShaderLab.h" />
+    <ClInclude Include="2019-9-25 Stack\Stack.h" />
+    <ClInclude Include="Shader\BasicShader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2019-9-18 SingleLinkedList\SingleLinkedList.h" />
-    <ClInclude Include="PolynomialMerging\Random.h" />
+    <ClCompile Include="2019-9-25 Stack\main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -78,7 +78,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>F:\OpenGL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\OpenGL\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -89,6 +92,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

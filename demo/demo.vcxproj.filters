@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-9-18 SingleLinkedList\main.c">
+    <ClInclude Include="2019-9-25 Stack\Stack.h">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="PolynomialMerging\PolynomialMerging.c">
+    </ClInclude>
+    <ClInclude Include="Shader\BasicShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2019-9-25 Stack\ShaderLab.h">
       <Filter>源文件</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2019-9-18 SingleLinkedList\SingleLinkedList.h">
+    <ClCompile Include="2019-9-25 Stack\main.c">
       <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PolynomialMerging\Random.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
 </Project>
