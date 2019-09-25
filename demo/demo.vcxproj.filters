@@ -18,7 +18,7 @@
     <ClCompile Include="2019-9-18 SingleLinkedList\main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="PolynomialMerging.c">
+    <ClCompile Include="PolynomialMerging\PolynomialMerging.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <ClInclude Include="2019-9-18 SingleLinkedList\SingleLinkedList.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="Random.h">
+    <ClInclude Include="PolynomialMerging\Random.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

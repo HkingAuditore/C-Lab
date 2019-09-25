@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "Random.h"
 
+#define  DEFAULTMAXNUM 30
+
 //TODOCLAB#0 现在只有对于x的单项式
 //TODOCLAB#1 输出多项式没有按次数排序
 //TODOCLAB#2 整理算法不够优雅
@@ -37,6 +39,7 @@ int GenerateMonomial(Monomial* _monamial,int _indexMin,int _indexMax,int _coeMin
 int WriteMonomial(Monomial _monamial)
 {
 	printf("%d%c(%d)", _monamial.Coefficient, _monamial.Base, _monamial.Index);
+	return 1;
 }
 
 
@@ -66,6 +69,24 @@ int WritePolynomial(Polynomial _poly)
 		}
 	}
 	printf("\n");
+	return 1;
+}
+
+//按次数给多项式排序
+int SoftPolynomialByIndex(Polynomial _poly)
+{
+	for (int i = 0; i < _poly.Length; i++)
+	{
+		for (int j = i; j < _poly.Length; j++)
+		{
+			if (_poly.Monos[i].Index > _poly.Monos[j].Index)
+			{
+				Monomial temp;
+				temp = _poly.Monos[i], _poly.Monos[i] = _poly.Monos[j], _poly.Monos[j] = temp;
+			}
+		}
+	}
+	return 0;
 }
 
 //整理多项式
@@ -73,8 +94,8 @@ Polynomial* SoftAndCreatePolynomial(Polynomial _poly)
 {
 	// printf("IN!\n");
 	Polynomial* newPoly;
-	newPoly = (Polynomial*)calloc(20, sizeof(Monomial));
-	newPoly->Monos = (Monomial*)calloc(20, sizeof(Monomial));
+	newPoly = (Polynomial*)calloc(DEFAULTMAXNUM, sizeof(Monomial));
+	newPoly->Monos = (Monomial*)calloc(DEFAULTMAXNUM, sizeof(Monomial));
 	for(int loopInOrigin=0;loopInOrigin<_poly.Length;loopInOrigin++)
 	{
 		int temp=1;
@@ -96,8 +117,10 @@ Polynomial* SoftAndCreatePolynomial(Polynomial _poly)
 		// printf("soft!");
 
 	}
+	SoftPolynomialByIndex(*newPoly);
 	return newPoly;
 }
+
 
 
 int main()
@@ -114,6 +137,7 @@ int main()
 	WritePolynomial(test);
 	out = SoftAndCreatePolynomial(test);
 	printf("*********\nSOFT:\n");
+	// SoftPolynomialByIndex(*out);
 	WritePolynomial(*out);
 	free(out);
 	
