@@ -24,6 +24,9 @@
     <ClInclude Include="2019-9-25 Stack\ShaderLab.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="2019-9-25 Stack\ViewManager.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2019-9-25 Stack\main.c">

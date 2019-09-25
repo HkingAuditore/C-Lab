@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="2019-9-25 Stack\ShaderLab.h" />
     <ClInclude Include="2019-9-25 Stack\Stack.h" />
+    <ClInclude Include="2019-9-25 Stack\ViewManager.h" />
     <ClInclude Include="Shader\BasicShader.h" />
   </ItemGroup>
   <ItemGroup>
