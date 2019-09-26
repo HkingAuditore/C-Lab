@@ -8,7 +8,7 @@
 
 
 //////////预定义/////////
-#define MAPSIZE 20
+#define MAPSIZE 30
 
 ///////预定义/////////
 
@@ -20,7 +20,7 @@ typedef enum point{
 	wall=0, road, entryDoor, exitDoor,solution,border
 }Point;
 
-char _Material[20][20] = {"█","  ","☑","☒","●","※"};
+char _Material[20][20] = {"█","  ","Ｉ","Ｅ","●","※"};
 
 typedef struct vector2{
 	int x;
@@ -64,12 +64,20 @@ typedef enum turn {
 
 Vector2 _Direction[4] = { { 1,0 },{ 0,1 },{ -1,0 },{ 0,-1 } };
 
-
+//坐标
 typedef struct transform {
 	Position Pos;
 	Direction Dir;
 }Transform;
 
+//路径点集合
+typedef struct pointArray
+{
+	Position Array[MAPSIZE*MAPSIZE];
+	int Num;
+}PointArray;
+
+PointArray _Roads;
 ///////////预定义///////////
 
 
@@ -98,12 +106,25 @@ Point GetPositionPoint(Map _map,Position _position)
 {
 	return (_map[_position.x][_position.y]);
 }
+//获取反方向
+Direction ReversedDiretion(Direction _dir)
+{
+	Direction result = _dir+=2;
+	if (_dir > 3)
+	{
+		_dir -= 4;
+	}
+}
+
 
 //转向
 void Rotate(Transform *_transform,Turn _dir)
 {
 	_transform->Dir += _dir;
-	_transform->Dir > 3 ? _transform->Dir - 4 : _transform->Dir;
+	if(_transform->Dir >3)
+	{
+		_transform->Dir -= 4;
+	}
 }
 
 
@@ -178,18 +199,22 @@ int BuildRoad(Map _map,Transform *_transform)
 	}
 
 	_map[target.Pos.x][target.Pos.y] = road;
+	_Roads.Array[_Roads.Num++] = target.Pos;
 	_transform->Pos = target.Pos;
 	return  0;
 }
 
 
 //生成迷宫主路
-int SetMazeMainRoute(Maze* _maze,int _complexity)
+int SetMazeMainRoute(Maze* _maze,int _minDistance,int _maxDistance)
 {
 	SetRandSeed();
+	int tempMin = 1.2*_minDistance;
+	int tempMax = 1.5*_maxDistance;
 	int side = GetPowerNumber(4);
-	Position init = { GetPowerNumber(_maze->SizeOfMap),GetPowerNumber(_maze->SizeOfMap)};
+	Position init = { (_maze->SizeOfMap) / 3+GetPowerNumber((_maze->SizeOfMap)/3),(_maze->SizeOfMap) / 3 + GetPowerNumber((_maze->SizeOfMap) / 3) };
 	Direction initDir;
+	//随机入口的边
 	switch (side)
 	{
 	case 0:
@@ -212,30 +237,43 @@ int SetMazeMainRoute(Maze* _maze,int _complexity)
 	_maze->Map[init.x][init.y] = entryDoor;
 	_maze->Init = init;
 	printf("IN!");
+	//生成一个工人开挖道路
 	Transform worker = { _maze->Init,initDir };
 	BuildRoad(_maze->Map, &worker);
 	while (GetPositionPoint(_maze->Map,worker.Pos) != border)
 	{
-
-		for(int i=0;i< GetPowerNumber(6);i++)
+		printf("NOW TURN %d\n", worker.Dir);
+		//如果走了反方向就减少反向行进距离
+		if(worker.Dir == ReversedDiretion(initDir))
 		{
+			tempMax /= 3;
+			tempMin /= 3;
+		}else
+		{
+			tempMax = _maxDistance;
+			tempMin = _minDistance;
+		}
+		for(int i=0;i< (_minDistance+GetPowerNumber(tempMax - tempMin));i++)
+		{
+			//如果下一格就挖到边界说明已经到出口
 			if(GetPositionPoint(_maze->Map,MoveInDirection(worker,1)) == border)
 			{
 				worker.Pos = MoveInDirection(worker, 1);
 				break;
 			}
+			//如果要接上就转向
 			if(BuildRoad(_maze->Map, &worker))
 			{
 				Rotate(&worker, turnRight);
 				i--;
 			}
 			printf("now at(%d,%d),point is %d\n", worker.Pos.x, worker.Pos.y,GetPositionPoint(_maze->Map,worker.Pos));
-			MazeRenderer(*_maze);
+			// MazeRenderer(*_maze);
 		}
 		Turn turnDir = (Turn)GetPowerNumber(4);
 		if (turnDir == turnARound)
 		{
-			turnDir = staying;
+			turnDir = initDir;
 		}
 		Rotate(&worker, turnDir);
 	}
@@ -252,14 +290,19 @@ int GenerateMaze(Maze* _maze, int _sizeOfMap)
 }
 
 
-
+//开挖支路
+int SetMazeBranch(Maze* _maze,int _numOfBrance, int _minDistance, int _maxDistance)
+{
+	
+}
 
 
 int main()
 {
 	Maze test;
+	_Roads.Num = 0;
 	GenerateMaze(&test, MAPSIZE);
-	SetMazeMainRoute(&test,1);
+	SetMazeMainRoute(&test,3,6);
 	printf("done\n");
 	MazeRenderer(test);
 	
