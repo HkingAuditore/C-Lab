@@ -12,33 +12,33 @@ typedef struct stack{
 }Stack;
 //生成栈
 
-int GenerateStack(Stack* _stack)
+static int GenerateStack(Stack* _stack)
 {
 	_stack->StackArray = (StackEnum*)malloc(sizeof(StackEnum)*STACKMAXSPACE);
 	_stack->StackTop = 0;
 	return 0;
 }
 //进栈
-int Push(Stack* _stack,StackEnum _data)
+static int Push(Stack* _stack,StackEnum _data)
 {
 	_stack->StackArray[_stack->StackTop++] = _data;
 	return 0;
 }
 
 //出栈
-StackEnum Pop(Stack* _stack)
+static StackEnum Pop(Stack* _stack)
 {
 	return (_stack->StackArray[--_stack->StackTop]);
 }
 
 //获取栈长度
-int GetStackLength(Stack _stack)
+static int GetStackLength(Stack _stack)
 {
 	return (_stack.StackTop);
 }
 
 //是否为空栈
-int IsEmptyStack(Stack _stack)
+static int IsEmptyStack(Stack _stack)
 {
 	return (_stack.StackTop ? 0 : 1);
 }
