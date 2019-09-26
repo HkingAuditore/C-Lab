@@ -151,7 +151,7 @@ static int MapRenderer(int _mapInView[FOV]) {
 			DrawMapPiece(_mapInView[ (int)sqrt(FOV)* i], _mapInView[(int)sqrt(FOV) * i + 1], _mapInView[(int)sqrt(FOV) * i + 2], 1);
 		}
 		else {
-			DrawMapPiece(_mapInView[(int)sqrt(FOV) * i], _mapInView[(int)sqrt(FOV) * i + 1], _mapInView[(int)sqrt(FOV)3 * i + 2], 0);
+			DrawMapPiece(_mapInView[(int)sqrt(FOV) * i], _mapInView[(int)sqrt(FOV) * i + 1], _mapInView[(int)sqrt(FOV) * i + 2], 0);
 
 		}
 	}

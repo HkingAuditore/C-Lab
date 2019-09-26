@@ -1,104 +1,266 @@
-///////Í·ÎÄ¼ş/////////
+ï»¿///////å¤´æ–‡ä»¶/////////
 #include "ViewManager.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <math.h>
-///////Í·ÎÄ¼ş/////////
+///////å¤´æ–‡ä»¶/////////
 
 
-//////////Ô¤¶¨Òå/////////
-#define MAPSIZE 9
+//////////é¢„å®šä¹‰/////////
+#define MAPSIZE 20
 
-///////Ô¤¶¨Òå/////////
+///////é¢„å®šä¹‰/////////
 
 
 
-//////ÀàĞÍ//////
-//µØµãĞÎÌ¬
+//////ç±»å‹//////
+//åœ°ç‚¹å½¢æ€
 typedef enum point{
-	wall=0, road, entryDoor, exitDoor,solution,outside
+	wall=0, road, entryDoor, exitDoor,solution,border
 }Point;
+
+char _Material[20][20] = {"â–ˆ","  ","â˜‘","â˜’","â—","â€»"};
 
 typedef struct vector2{
 	int x;
 	int y;
 }Vector2;
 
-typedef  Vector2 Transform;
+typedef  Vector2 Position;
+typedef  Vector2 Rotation;
+typedef  Point** Map;
 
 typedef struct maze{
 	Point** Map;
-	Transform Init;
-	Transform End;
+	int		SizeOfMap;
+	Position Init;
+	Position End;
 }Maze;
 
-//////ÀàĞÍ//////
-
-
-///////////Ô¤¶¨Òå///////////
-//»ù±¾³¯Ïò
-Vector2 forward		= { 1,0 };
-Vector2 backward	= { -1,0 };
-Vector2 leftward	= { 0,1 };
-Vector2 rightward	= { 0,-1 };
-Vector2 stay		= { 0,0 };
-///////////Ô¤¶¨Òå///////////
 
 
 
-////////////·½·¨////////////
-//´´½¨Ò»¸öÖ»ÓĞÇ½µÄµØÍ¼
-Point** CreateEmptyMap()
+
+//////ç±»å‹//////
+
+
+///////////é¢„å®šä¹‰///////////
+//åŸºæœ¬æœå‘
+Vector2 _Forward		= { 1,0 };
+Vector2 _Backward		= { -1,0 };
+Vector2 _Leftward		= { 0,1 };
+Vector2 _Rightward		= { 0,-1 };
+Vector2 _Stay			= { 0,0 };
+
+//é¡ºæ—¶é’ˆæ—‹è½¬
+typedef enum direction {
+	forward = 0, rightward, backward, leftward
+}Direction;
+
+typedef enum turn {
+	staying = 0, turnRight = 1, turnARound = 2, turnLeft = -1
+}Turn;
+
+Vector2 _Direction[4] = { { 1,0 },{ 0,1 },{ -1,0 },{ 0,-1 } };
+
+
+typedef struct transform {
+	Position Pos;
+	Direction Dir;
+}Transform;
+
+///////////é¢„å®šä¹‰///////////
+
+
+
+////////////æ–¹æ³•////////////
+
+/*Position/Vectorè®¡ç®—ç±»*/
+
+
+//å‘é‡ä¹˜æ³•
+Vector2 VectorMult(int _coefficient,Vector2 _vector)
 {
-
-	//Éú³É¿ÕµØÍ¼
-	Point** map = (Point**)calloc(MAPSIZE, sizeof(Point*));
-	for(int i=0;i<MAPSIZE;i++)
-	{
-		map[i] = (Point*)calloc(MAPSIZE, sizeof(Point));
-	}
-	//¸øÖÜÎ§ÆÌÂ·
-	for(int i=0;i<MAPSIZE;i++)
-	{
-		if(i==0 || i==MAPSIZE-1)
-		{
-			for(int j=0;j<MAPSIZE;j++)
-			{
-				map[i][j] = outside;
-			}
-		}else
-		{
-			map[i][0] = outside;
-			map[i][MAPSIZE - 1] = outside;
-		}
-	}
+	Vector2 result = {_coefficient*_vector.x,_coefficient*_vector.y};
+	return  result;
 }
-//¸ù¾İÏòÁ¿¼ÆËãÏÂÒ»Î»ÖÃ
-Transform Transforming(Transform _position,Vector2 _dir)
+
+//å‘é‡åŠ æ³•
+Vector2 VectorAddition(Vector2 _v1, Vector2 _v2)
 {
-	Transform result = { _position.x + _dir.x,_position.y + _dir.y };
+	Vector2 result = { _v1.x + _v2.x,_v1.y + _v2.y };
+	return result;
+}
+
+//è·å–åæ ‡çš„åœ°å½¢
+Point GetPositionPoint(Map _map,Position _position)
+{
+	return (_map[_position.x][_position.y]);
+}
+
+//è½¬å‘
+void Rotate(Transform *_transform,Turn _dir)
+{
+	_transform->Dir += _dir;
+	_transform->Dir > 3 ? _transform->Dir - 4 : _transform->Dir;
+}
+
+
+
+//æ²¿æœå‘ç§»åŠ¨
+Position MoveInDirection(Transform _transform,int _distance)
+{
+	Position result = VectorAddition(_transform.Pos, VectorMult(_distance, _Direction[_transform.Dir]));
 	return result;
 }
 
 
-//ÍÚÂ·
-int BuildRoad(Point** _map,Vector2 _dir,Transform _position,Point _avoid)
+
+
+/*Position/Vectorè®¡ç®—ç±»*/
+//è¿·å®«æ¸²æŸ“å™¨
+int MazeRenderer(Maze _maze)
 {
-	Transform target = Transforming(_position, _dir);
-	if(	_map[Transforming(target,leftward).x][Transforming(target,leftward).y] != road 	)
+	for (int i = 0; i < _maze.SizeOfMap; i++)
 	{
-		
+		for (int j = 0; j < _maze.SizeOfMap; j++)
+		{
+			printf("%s", _Material[_maze.Map[i][j]]);
+		}
+		printf("\n");
 	}
+	return 0;
+}
+
+//åˆ›å»ºä¸€ä¸ªåªæœ‰å¢™çš„åœ°å›¾
+Map CreateEmptyMap(int _sizeOfMap)
+{
+	// printf("IN 0!\n");
+	//ç”Ÿæˆç©ºåœ°å›¾
+	Map map = (Map)calloc(_sizeOfMap, sizeof(Point*));
+	for(int i=0;i<_sizeOfMap;i++)
+	{
+		map[i] = (Point*)calloc(_sizeOfMap, sizeof(Point));
+	}
+	// printf("IN 1!\n");
+	//ç»™å‘¨å›´é“ºè·¯
+	for(int i=0;i<_sizeOfMap;i++)
+	{
+		if(i==0 || i==_sizeOfMap-1)
+		{
+			for(int j=0;j<_sizeOfMap;j++)
+			{
+				map[i][j] = border;
+			}
+		}else
+		{
+			map[i][0] = border;
+			map[i][_sizeOfMap - 1] = border;
+		}
+	}
+	return map;
 }
 
 
-//Éú³ÉÃÔ¹¬Ö÷Â·
+//æŒ–è·¯
+int BuildRoad(Map _map,Transform *_transform)
+{
+	Transform target = { MoveInDirection(*_transform,1),_transform->Dir };
+	Rotate(&target, turnLeft);
+	for(int i=0;i<3;i++)
+	{
+		if(GetPositionPoint(_map,MoveInDirection(target,1)) == road)
+		{
+			return 1;
+		}
+		Rotate(&target, turnRight);
+	}
+
+	_map[target.Pos.x][target.Pos.y] = road;
+	_transform->Pos = target.Pos;
+	return  0;
+}
+
+
+//ç”Ÿæˆè¿·å®«ä¸»è·¯
 int SetMazeMainRoute(Maze* _maze,int _complexity)
 {
 	SetRandSeed();
-	Transform init = { GetPowerNumber(MAPSIZE),GetPowerNumber(MAPSIZE)};
+	int side = GetPowerNumber(4);
+	Position init = { GetPowerNumber(_maze->SizeOfMap),GetPowerNumber(_maze->SizeOfMap)};
+	Direction initDir;
+	switch (side)
+	{
+	case 0:
+		init.x = 0;
+		initDir = forward;
+		break;
+	case 1:
+		init.x = _maze->SizeOfMap - 1;
+		initDir = backward;
+		break;
+	case 2:
+		init.y = 0;
+		initDir = rightward;
+		break;
+	case 3:
+		init.y = _maze->SizeOfMap - 1;
+		initDir = leftward;
+		break;
+	}
 	_maze->Map[init.x][init.y] = entryDoor;
 	_maze->Init = init;
+	printf("IN!");
+	Transform worker = { _maze->Init,initDir };
+	BuildRoad(_maze->Map, &worker);
+	while (GetPositionPoint(_maze->Map,worker.Pos) != border)
+	{
+
+		for(int i=0;i< GetPowerNumber(6);i++)
+		{
+			if(GetPositionPoint(_maze->Map,MoveInDirection(worker,1)) == border)
+			{
+				worker.Pos = MoveInDirection(worker, 1);
+				break;
+			}
+			if(BuildRoad(_maze->Map, &worker))
+			{
+				Rotate(&worker, turnRight);
+				i--;
+			}
+			printf("now at(%d,%d),point is %d\n", worker.Pos.x, worker.Pos.y,GetPositionPoint(_maze->Map,worker.Pos));
+			MazeRenderer(*_maze);
+		}
+		Turn turnDir = (Turn)GetPowerNumber(4);
+		if (turnDir == turnARound)
+		{
+			turnDir = staying;
+		}
+		Rotate(&worker, turnDir);
+	}
+	_maze->Map[worker.Pos.x][worker.Pos.y] = exitDoor;
+}
+
+
+//
+int GenerateMaze(Maze* _maze, int _sizeOfMap)
+{
+	_maze->SizeOfMap = _sizeOfMap;
+	_maze->Map = CreateEmptyMap(_maze->SizeOfMap);
+	return 0;
+}
+
+
+
+
+
+int main()
+{
+	Maze test;
+	GenerateMaze(&test, MAPSIZE);
+	SetMazeMainRoute(&test,1);
+	printf("done\n");
+	MazeRenderer(test);
 	
 }
