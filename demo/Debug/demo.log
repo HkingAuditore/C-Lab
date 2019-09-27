@@ -3,7 +3,7 @@
 f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(232): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
 f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(233): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
 f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(117): warning C4716: “ReversedDiretion”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(300): warning C4716: “SetMazeMainRoute”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(361): warning C4716: “SetMazeBranch”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(346): warning C4715: “SetMazeABranch”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(345): warning C4715: “SetMazeABranch”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(360): warning C4716: “SetMazeBranch”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(299): warning C4716: “SetMazeMainRoute”: 必须返回一个值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe

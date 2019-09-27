@@ -8,7 +8,7 @@
 
 
 //////////预定义/////////
-#define MAPSIZE 30
+#define MAPSIZE 80
 
 ///////预定义/////////
 
@@ -207,20 +207,20 @@ int BuildRoad(Map _map,Transform *_transform)
 int BuildMainRoad(Map _map,Transform *_transform)
 {
 	Transform target = { MoveInDirection(*_transform,1),_transform->Dir };
-	//Rotate(&target, turnLeft);
-	// for(int i=0;i<3;i++)
-	// {
-	// 	if(GetPositionPoint(_map,MoveInDirection(target,1)) == road)
-	// 	{
-	// 		return 1;
-	// 	}
-	// 	Rotate(&target, turnRight);
-	// }
+	Rotate(&target, turnLeft);
+	 for(int i=0;i<3;i++)
+	 {
+	 	if(GetPositionPoint(_map,MoveInDirection(target,1)) == road)
+	 	{
+	 		return 1;
+	 	}
+	 	Rotate(&target, turnRight);
+	 }
 
 	_map[target.Pos.x][target.Pos.y] = road;
 	_Roads.Array[_Roads.Num++] = target.Pos;
 	_transform->Pos = target.Pos;
-	printf("buid!\n");
+	// printf("build!\n");
 	return  0;
 }
 
@@ -269,8 +269,7 @@ int SetMazeMainRoute(Maze* _maze,int _minDistance,int _maxDistance)
 		tempMin = _minDistance;
 		if(worker.Dir == ReversedDiretion(initDir))
 		{
-			tempMax /= 3;
-			tempMin /= 3;
+			worker.Dir = initDir;
 		}
 		for(int i=0;i< (_minDistance+GetPowerNumber(tempMax - tempMin));i++)
 		{
@@ -369,7 +368,7 @@ int main()
 	SetMazeMainRoute(&test,3,6);
 	printf("done\n");
 	MazeRenderer(test);
-	SetMazeBranch(&test, 5000, 3, 8);
+	SetMazeBranch(&test, 3000, 3, 8);
 	printf("ALL done\n");
 	MazeRenderer(test);
 	
