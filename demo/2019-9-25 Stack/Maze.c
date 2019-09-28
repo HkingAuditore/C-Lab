@@ -1,15 +1,17 @@
 ﻿///////头文件/////////
 #include "ViewManager.h"
+#include "Stack.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <windows.h> 
 #include <math.h>
 ///////头文件/////////
 
 
 //////////预定义/////////
-#define MAPSIZE 80
-
+#define MAPSIZE 20
+#define WAITETIME 1
 ///////预定义/////////
 
 
@@ -17,10 +19,10 @@
 //////类型//////
 //地点形态
 typedef enum point{
-	wall=0, road, entryDoor, exitDoor,solution,border
+	wall=0, road, entryDoor, exitDoor,solution,border,awalker
 }Point;
 
-char _Material[20][20] = {"█","  ","Ｉ","Ｅ","●","※"};
+char _Material[20][20] = {"█","  ","Ｉ","Ｅ","●","※","Ｗ"};
 
 typedef struct vector2{
 	int x;
@@ -59,7 +61,7 @@ typedef enum direction {
 }Direction;
 
 typedef enum turn {
-	staying = 0, turnRight = 1, turnARound = 2, turnLeft = -1
+	staying = 0, turnLeft = 1, turnARound = 2, turnRight = -1
 }Turn;
 
 Vector2 _Direction[4] = { { 1,0 },{ 0,1 },{ -1,0 },{ 0,-1 } };
@@ -125,6 +127,10 @@ void Rotate(Transform *_transform,Turn _dir)
 	{
 		_transform->Dir -= 4;
 	}
+	if(_transform->Dir<0)
+	{
+		_transform->Dir += 4;
+	}
 }
 
 
@@ -188,14 +194,14 @@ Map CreateEmptyMap(int _sizeOfMap)
 int BuildRoad(Map _map,Transform *_transform)
 {
 	Transform target = { MoveInDirection(*_transform,1),_transform->Dir };
-	Rotate(&target, turnLeft);
+	Rotate(&target, turnRight);
 	for(int i=0;i<3;i++)
 	{
 		if(GetPositionPoint(_map,MoveInDirection(target,1)) == road || (GetPositionPoint(_map, MoveInDirection(target, 1)) == border))
 		{
 			return 1;
 		}
-		Rotate(&target, turnRight);
+		Rotate(&target, turnLeft);
 	}
 
 	_map[target.Pos.x][target.Pos.y] = road;
@@ -207,14 +213,14 @@ int BuildRoad(Map _map,Transform *_transform)
 int BuildMainRoad(Map _map,Transform *_transform)
 {
 	Transform target = { MoveInDirection(*_transform,1),_transform->Dir };
-	Rotate(&target, turnLeft);
+	Rotate(&target, turnRight);
 	 for(int i=0;i<3;i++)
 	 {
 	 	if(GetPositionPoint(_map,MoveInDirection(target,1)) == road)
 	 	{
 	 		return 1;
 	 	}
-	 	Rotate(&target, turnRight);
+	 	Rotate(&target, turnLeft);
 	 }
 
 	_map[target.Pos.x][target.Pos.y] = road;
@@ -282,7 +288,7 @@ int SetMazeMainRoute(Maze* _maze,int _minDistance,int _maxDistance)
 			//如果要接上就转向
 			if(BuildMainRoad(_maze->Map, &worker))
 			{
-				Rotate(&worker, turnRight);
+				Rotate(&worker, turnLeft);
 				i--;
 			}
 			// printf("now at(%d,%d),point is %d\n", worker.Pos.x, worker.Pos.y,GetPositionPoint(_maze->Map,worker.Pos));
@@ -359,17 +365,218 @@ int SetMazeBranch(Maze* _maze,int _numOfBrance, int _minDistance, int _maxDistan
 
 }
 
+/*寻路*/
+int FindTheSolution(Maze* _maze)
+{
+	// printf("INIT:%d,%d\n", _maze->Init.x, _maze->Init.y);
+	Direction initDir =forward;
+	//路径点栈
+	Stack cross;GenerateStack(&cross);
+	Transform walker = {_maze->Init,forward};
+	printf("INIT:%d,%d\n", walker.Pos.x,walker.Pos.y );
+
+	printf("IN 0\n");
+
+	if(walker.Pos.x == _maze->SizeOfMap-1)
+	{
+		walker.Dir = backward;
+
+	}
+	if(walker.Pos.x == 0)
+	{
+		walker.Dir = forward;
+
+	}
+	if(walker.Pos.y == _maze->SizeOfMap-1)
+	{
+		walker.Dir = leftward;
+
+	}
+	if(walker.Pos.y == 0)
+	{
+		walker.Dir = rightward;
+
+	}
+	walker.Pos = MoveInDirection(walker, 1);
+	printf("IN 1\n");
+	printf("dir is %d\n", walker.Dir);
+	while (GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) != exitDoor)
+	{
+		 Sleep(WAITETIME);
+		 system("cls");
+		printf("IN LOOP0\n");
+		
+		 MazeRenderer(*_maze);
+		if ((cross.StackArray[cross.StackTop - 1] == walker.Pos.x * 100 + walker.Pos.y))
+		{
+			// walker.Dir = ReversedDiretion(walker.Dir);
+			//那就转弯并且把这个转向点扔出去
+			printf("***********stack at%d No.%d\n", cross.StackArray[cross.StackTop - 1],cross.StackTop);
+			Sleep(WAITETIME);
+			for (int i = 0; i < 4; i++)
+			{
+				printf("AT IT!\n");
+				Sleep(WAITETIME);
+				Rotate(&walker, turnLeft);
+				if ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == road)) {
+					printf("FIND IT!\n");
+					Sleep(WAITETIME);
+					goto POPIT;
+
+				}
+
+			}
+			Rotate(&walker, turnRight);
+			Pop(&cross);
+			goto ISBARRIER;
+			// _maze->Map[walker.Pos.x][walker.Pos.y] = solution;
+			// walker.Pos = MoveInDirection(walker, 1);
+			// _maze->Map[walker.Pos.x][walker.Pos.y] = awalker;
+			POPIT:
+			Pop(&cross);
+			goto WALK;
+			// continue;
+		}
+		int isRoad = 0;
+		int roads =0 ;
+		int isUncharated=0;
+		int isUcharatedSolution = 0;
+		int isExit = 0;
+		//是否为岔路口
+		if ((cross.StackArray[cross.StackTop-1]!=walker.Pos.x*100+walker.Pos.y))
+		{
+			printf("CARE\n");
+			Sleep(WAITETIME);
+			for (int i = 0; i < 4; i++) {
+				Rotate(&walker, turnLeft);
+				if ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == road)|| (GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == solution))
+				{
+					roads++;
+					printf("FIND MORE ROADS\n");
+					Sleep(WAITETIME);
+
+				}
+			}
+			if (roads > 2)
+			{
+				isRoad = 1;
+				Push(&cross, walker.Pos.x * 100 + walker.Pos.y);
+				printf("！！！！！！！！！！stack at%d  NO.%d\n", cross.StackArray[cross.StackTop - 1],cross.StackTop);
+				Sleep(WAITETIME);
+
+			}
+		}
+		printf("IN LOOP1\n");
+		ISBARRIER:
+		//如果前方没有路
+		if (GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) != road && GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) != solution) {
+			// int isRoad = 0;
+			//转一圈，查找是否有没走过的路
+
+			for(int i=0;i<4;i++)
+			{
+				Rotate(&walker, turnLeft);
+				if((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == exitDoor)){
+					isExit = 1;
+					break;
+					
+				}
+			}
+			if (!isExit) {
+				for (int i = 0; i < 4; i++)
+				{
+					Rotate(&walker, turnLeft);
+					if ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == road)) {
+						isUncharated = 1;
+						break;
+
+					}
+				}
+			}
+			
+			if (!isUncharated && !isExit) {
+				Direction originalDir = walker.Dir;
+				for (int i = 0; i < 4; i++)
+				{
+					Rotate(&walker, turnLeft);
+					if ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == solution) && walker.Dir!=ReversedDiretion(originalDir)) {
+						isUcharatedSolution = 1;
+						break;
+
+					}
+				}
+			}
+			// while ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1))!= road))
+			// {
+			// 	Rotate(&walker, turnLeft);
+			// 	isUncharated = 1;
+			// }
+			if(!isUncharated && !isUcharatedSolution && !isExit)
+			{
+				while ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) != solution))
+				{
+					Rotate(&walker, turnRight);
+				}
+			}
+			// for (int i = 0; i < 5; i++) {
+			// 	if ((GetPositionPoint(_maze->Map, MoveInDirection(walker, 1)) == road))
+			// 	{
+			// 		isRoad = 1;
+			// 		// Push(&cross, walker.Pos.x * 100 + walker.Pos.y);
+			// 		break;
+			// 	}
+			// 	Rotate(&walker, turnLeft);
+			//
+			// }
+			//到这里找到路的isroad=1，否则isroad=0
+			//如果没找到路且所在地是上一个转向点
+			// if (!isRoad && (walker.Pos.x == cross.StackArray[cross.StackTop - 2] / 100 && walker.Pos.y == cross.StackArray[cross.StackTop - 2] % 100))
+			// {
+			// 	// walker.Dir = ReversedDiretion(walker.Dir);
+			// 	//那就转弯并且把这个转向点扔出去
+			// 	Rotate(&walker, turnLeft);
+			// 	Pop(&cross);
+			// }
+			//把转个转弯点记录
+			// if(!isRoad)
+			// {
+			// 	walker.Dir = ReversedDiretion(walker.Dir);
+			// }
+			// printf("now dir is %d\n", walker.Dir);
+			// continue;
+		}
+		// if (!isRoad &&(MoveInDirection(walker, 1).x == cross.StackArray[cross.StackTop - 1] / 100 && MoveInDirection(walker, 1).y == cross.StackArray[cross.StackTop - 1] % 100))
+		// {
+		// 	// walker.Dir = ReversedDiretion(walker.Dir);
+		// 	//那就转弯并且把这个转向点扔出去
+		// 	Rotate(&walker, turnRight);
+		// 	Pop(&cross);
+		// 	continue;
+		// }
+		WALK:
+		_maze->Map[walker.Pos.x][walker.Pos.y] = solution;
+		walker.Pos = MoveInDirection(walker, 1);
+		_maze->Map[walker.Pos.x][walker.Pos.y] = awalker;
+		// printf("Now at (%d,%d)\n", walker.Pos.x, walker.Pos.y);
+	}
+	return 0;
+}
+
+/*寻路*/
 
 int main()
 {
 	Maze test;
 	_Roads.Num = 0;
 	GenerateMaze(&test, MAPSIZE);
-	SetMazeMainRoute(&test,3,6);
+	SetMazeMainRoute(&test,2,3);
 	printf("done\n");
 	MazeRenderer(test);
-	SetMazeBranch(&test, 3000, 3, 8);
+	SetMazeBranch(&test, 10, 2, 4);
 	printf("ALL done\n");
+	MazeRenderer(test);
+	printf("Finding\n");
+	FindTheSolution(&test);
 	MazeRenderer(test);
 	
 }
