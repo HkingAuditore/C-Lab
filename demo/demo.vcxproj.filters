@@ -26,7 +26,7 @@
     <ClCompile Include="2019-9-25 Stack\main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="2019-9-25 Stack\Maze.c">
+    <ClCompile Include="pack.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,9 +1,7 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(demo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
-  Maze.c
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(238): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(239): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(119): warning C4716: “ReversedDiretion”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(305): warning C4716: “SetMazeMainRoute”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(351): warning C4715: “SetMazeABranch”: 不是所有的控件路径都返回值
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\maze.c(366): warning C4716: “SetMazeBranch”: 必须返回一个值
+  pack.c
+f:\cprogram\clab\c-lab\demo\pack.c(61): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“Item”
+f:\cprogram\clab\c-lab\demo\pack.c(31): warning C4716: “GeneratePack”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\pack.c(50): warning C4716: “SoftPack”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\pack.c(55): warning C4716: “PickItem”: 必须返回一个值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe
