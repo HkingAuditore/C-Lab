@@ -1,7 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(demo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
   pack.c
-f:\cprogram\clab\c-lab\demo\pack.c(61): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 2 拥有了类型“Item”
-f:\cprogram\clab\c-lab\demo\pack.c(31): warning C4716: “GeneratePack”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\pack.c(50): warning C4716: “SoftPack”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\pack.c(55): warning C4716: “PickItem”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\pack.c(35): warning C4716: “GeneratePack”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\pack.c(54): warning C4716: “SoftPack”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\pack.c(104): warning C4716: “PickItem”: 必须返回一个值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe
