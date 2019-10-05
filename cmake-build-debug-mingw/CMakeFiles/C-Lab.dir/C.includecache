@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/Stack.h
+stdio.h
+-
+stdlib.h
+-
+
+F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/ViewManager.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+
+F:/CProgram/CLab/C-Lab/demo/pack.c
+2019-9-25 Stack/Stack.h
+F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/Stack.h
+2019-9-25 Stack/ViewManager.h
+F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/ViewManager.h
+stdlib.h
+-
+stdio.h
+-
+
