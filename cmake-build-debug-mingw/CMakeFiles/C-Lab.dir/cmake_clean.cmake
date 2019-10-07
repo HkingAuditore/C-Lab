@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "C-Lab.exe"
   "C-Lab.exe.manifest"
   "C-Lab.pdb"
-  "CMakeFiles/C-Lab.dir/demo/pack.c.obj"
+  "CMakeFiles/C-Lab.dir/demo/Bracket.c.obj"
   "libC-Lab.dll.a"
 )
 

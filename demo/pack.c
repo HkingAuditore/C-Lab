@@ -29,6 +29,7 @@ int GeneratePack(Pack* _pack, int _maxWeight, int _numOfItem)
 		_pack->Items[i].Num = i;
 	}
 	_pack->NumOfItems = _numOfItem;
+
 	_pack->MaxWeight = _maxWeight;
 	_pack->NumOfPicked = 0;
 	_pack->weightOfPicked = 0;

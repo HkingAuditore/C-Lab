@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "F:/CProgram/CLab/C-Lab/demo/pack.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/pack.c.obj"
+  "F:/CProgram/CLab/C-Lab/demo/Bracket.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/Bracket.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

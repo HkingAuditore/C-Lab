@@ -122,32 +122,32 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/pack.obj: demo/pack.c.obj
+demo/Bracket.obj: demo/Bracket.c.obj
 
-.PHONY : demo/pack.obj
+.PHONY : demo/Bracket.obj
 
 # target to build an object file
-demo/pack.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/pack.c.obj
-.PHONY : demo/pack.c.obj
+demo/Bracket.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.obj
+.PHONY : demo/Bracket.c.obj
 
-demo/pack.i: demo/pack.c.i
+demo/Bracket.i: demo/Bracket.c.i
 
-.PHONY : demo/pack.i
+.PHONY : demo/Bracket.i
 
 # target to preprocess a source file
-demo/pack.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/pack.c.i
-.PHONY : demo/pack.c.i
+demo/Bracket.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.i
+.PHONY : demo/Bracket.c.i
 
-demo/pack.s: demo/pack.c.s
+demo/Bracket.s: demo/Bracket.c.s
 
-.PHONY : demo/pack.s
+.PHONY : demo/Bracket.s
 
 # target to generate assembly for a file
-demo/pack.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/pack.c.s
-.PHONY : demo/pack.c.s
+demo/Bracket.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.s
+.PHONY : demo/Bracket.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/pack.obj
-	@echo ... demo/pack.i
-	@echo ... demo/pack.s
+	@echo ... demo/Bracket.obj
+	@echo ... demo/Bracket.i
+	@echo ... demo/Bracket.s
 .PHONY : help
 
 

@@ -74,7 +74,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/CProgram/CLab/C-Lab/demo/pack.c">
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/Bracket.c">
 			<Option target="C-Lab"/>
 		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/CMakeLists.txt">
