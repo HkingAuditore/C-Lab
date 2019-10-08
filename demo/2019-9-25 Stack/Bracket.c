@@ -58,15 +58,19 @@ int ReadChar2Action(Stack *_stack) {
 
 
 int Add(int _a,int _b){
+    printf("\n%d + %d = %d\n",_a,_b,_a+_b);
     return _a+_b;
 }
 int Minus(int _a,int _b){
+    printf("\n%d - %d = %d\n",_a,_b,_a-_b);
     return _a-_b;
 }
 int Multiply(int _a,int _b){
+    printf("\n%d * %d = %d\n",_a,_b,_a*_b);
     return _a*_b;
 }
 int Divide(int _a,int _b){
+    printf("\n%d / %d = %d\n",_a,_b,_a/_b);
     return _a/_b;
 }
 int Calculator(int _a,int _b,int _func){
@@ -89,18 +93,20 @@ int Calculator(int _a,int _b,int _func){
 void GetNonBracketMultiplyResult(Stack* _stack){
     Stack* tempSaver = (Stack*)malloc(sizeof(Stack));
     GenerateStack(tempSaver);
-    while (IsEmptyStack(*_stack)){
+    while (!IsEmptyStack(*_stack)){
         int temp = Pop(_stack);
         if((temp == '*')||(temp == '/')){
             int tempNext = Pop(_stack);
-            Push(tempSaver,Calculator(Pop(tempSaver),tempNext,temp));
+            int tempResult = Calculator(Pop(tempSaver),tempNext,temp);
+            Push(tempSaver,tempResult);
+//            printf("\n Get temp result:%d\n",tempResult);
             continue;
         }
         Push(tempSaver,temp);
     }
 //    把tempSaver给回去，这里变回顺序
-    free(_stack);
-    _stack = tempSaver;
+//    free(_stack);
+    *_stack = *tempSaver;
 }
 
 //合并加减结果
@@ -110,16 +116,19 @@ int GetNonBracketResult(Stack* _stack){
     Stack* tempSaver = (Stack*)malloc(sizeof(Stack));
     GenerateStack(tempSaver);
     int temp = 0;
-    while (IsEmptyStack(*_stack)){
+    while (!IsEmptyStack(*_stack)){
         temp = Pop(_stack);
+//        printf("   now pop a %d\n",temp);
+//        printf("\n   temp = %d\n",temp);
         if((temp == '+')||(temp == '-')){
             int tempNext = Pop(_stack);
-            Push(tempSaver,Calculator(tempNext,Pop(tempSaver),temp));
+            Push(tempSaver,Calculator(Pop(tempSaver),tempNext,temp));
             continue;
         }
         Push(tempSaver,temp);
     }
-    return temp;
+//    printf("\n GETRESULT : Sum a %d\n",temp);
+    return Pop(tempSaver);
 }
 
 int GetBracketResult(Stack* _stack){
@@ -130,6 +139,7 @@ int GetBracketResult(Stack* _stack){
     while ((temp = Pop(_stack)) != -1){
         if(temp == -2){
             Push(&tempSaver,GetBracketResult(_stack));
+            continue;
         }
         Push(&tempSaver,temp);
     }
@@ -168,7 +178,9 @@ int Getresult(Stack *_stack){
     Stack tempSaver;
     GenerateStack(&tempSaver);
     int temp;
-    while (IsEmptyStack(*_stack)){
+//    printf("OUTSIDE!\n");
+    while (!IsEmptyStack(*_stack)){
+//        printf("IN!\n");
         temp = Pop(_stack);
         if((temp == -2)||(temp == -1)){
             Push(&tempSaver,GetBracketResult(_stack));
@@ -176,6 +188,7 @@ int Getresult(Stack *_stack){
         }
         Push(&tempSaver,temp);
     }
+//    WriteDefault(&tempSaver);
    return GetNonBracketResult(&tempSaver);
 }
 int main() {
@@ -183,7 +196,7 @@ int main() {
     GenerateStack(&saver);
     printf("Input it\n");
     Read(&saver);
-    WriteDefault(&saver);
+//    WriteDefault(&saver);
     printf("\nresult is :%d\n", Getresult(&saver));
 //     getchar();
 }
