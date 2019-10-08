@@ -18,15 +18,9 @@
     <ClInclude Include="2019-9-25 Stack\Stack.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="2019-9-25 Stack\ViewManager.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-9-25 Stack\main.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="pack.c">
+    <ClCompile Include="2019-9-25 Stack\Bracket.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

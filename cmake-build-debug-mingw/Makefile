@@ -122,32 +122,32 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/Bracket.obj: demo/Bracket.c.obj
+demo/2019-9-25_Stack/Bracket.obj: demo/2019-9-25_Stack/Bracket.c.obj
 
-.PHONY : demo/Bracket.obj
+.PHONY : demo/2019-9-25_Stack/Bracket.obj
 
 # target to build an object file
-demo/Bracket.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.obj
-.PHONY : demo/Bracket.c.obj
+demo/2019-9-25_Stack/Bracket.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.obj
+.PHONY : demo/2019-9-25_Stack/Bracket.c.obj
 
-demo/Bracket.i: demo/Bracket.c.i
+demo/2019-9-25_Stack/Bracket.i: demo/2019-9-25_Stack/Bracket.c.i
 
-.PHONY : demo/Bracket.i
+.PHONY : demo/2019-9-25_Stack/Bracket.i
 
 # target to preprocess a source file
-demo/Bracket.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.i
-.PHONY : demo/Bracket.c.i
+demo/2019-9-25_Stack/Bracket.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.i
+.PHONY : demo/2019-9-25_Stack/Bracket.c.i
 
-demo/Bracket.s: demo/Bracket.c.s
+demo/2019-9-25_Stack/Bracket.s: demo/2019-9-25_Stack/Bracket.c.s
 
-.PHONY : demo/Bracket.s
+.PHONY : demo/2019-9-25_Stack/Bracket.s
 
 # target to generate assembly for a file
-demo/Bracket.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/Bracket.c.s
-.PHONY : demo/Bracket.c.s
+demo/2019-9-25_Stack/Bracket.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.s
+.PHONY : demo/2019-9-25_Stack/Bracket.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/Bracket.obj
-	@echo ... demo/Bracket.i
-	@echo ... demo/Bracket.s
+	@echo ... demo/2019-9-25_Stack/Bracket.obj
+	@echo ... demo/2019-9-25_Stack/Bracket.i
+	@echo ... demo/2019-9-25_Stack/Bracket.s
 .PHONY : help
 
 

@@ -20,11 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2019-9-25 Stack\Stack.h" />
-    <ClInclude Include="2019-9-25 Stack\ViewManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-9-25 Stack\main.c" />
-    <ClCompile Include="pack.c" />
+    <ClCompile Include="2019-9-25 Stack\Bracket.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

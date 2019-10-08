@@ -3,4 +3,4 @@ project(C-Lab C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(C-Lab demo/Bracket.c)
+add_executable(C-Lab "demo/2019-9-25 Stack/Bracket.c")
