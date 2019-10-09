@@ -122,32 +122,32 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/2019-9-25_Stack/Bracket.obj: demo/2019-9-25_Stack/Bracket.c.obj
+demo/2019-10-9_Queue/QueueTest.obj: demo/2019-10-9_Queue/QueueTest.c.obj
 
-.PHONY : demo/2019-9-25_Stack/Bracket.obj
+.PHONY : demo/2019-10-9_Queue/QueueTest.obj
 
 # target to build an object file
-demo/2019-9-25_Stack/Bracket.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.obj
-.PHONY : demo/2019-9-25_Stack/Bracket.c.obj
+demo/2019-10-9_Queue/QueueTest.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.obj
+.PHONY : demo/2019-10-9_Queue/QueueTest.c.obj
 
-demo/2019-9-25_Stack/Bracket.i: demo/2019-9-25_Stack/Bracket.c.i
+demo/2019-10-9_Queue/QueueTest.i: demo/2019-10-9_Queue/QueueTest.c.i
 
-.PHONY : demo/2019-9-25_Stack/Bracket.i
+.PHONY : demo/2019-10-9_Queue/QueueTest.i
 
 # target to preprocess a source file
-demo/2019-9-25_Stack/Bracket.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.i
-.PHONY : demo/2019-9-25_Stack/Bracket.c.i
+demo/2019-10-9_Queue/QueueTest.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.i
+.PHONY : demo/2019-10-9_Queue/QueueTest.c.i
 
-demo/2019-9-25_Stack/Bracket.s: demo/2019-9-25_Stack/Bracket.c.s
+demo/2019-10-9_Queue/QueueTest.s: demo/2019-10-9_Queue/QueueTest.c.s
 
-.PHONY : demo/2019-9-25_Stack/Bracket.s
+.PHONY : demo/2019-10-9_Queue/QueueTest.s
 
 # target to generate assembly for a file
-demo/2019-9-25_Stack/Bracket.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-9-25_Stack/Bracket.c.s
-.PHONY : demo/2019-9-25_Stack/Bracket.c.s
+demo/2019-10-9_Queue/QueueTest.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.s
+.PHONY : demo/2019-10-9_Queue/QueueTest.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/2019-9-25_Stack/Bracket.obj
-	@echo ... demo/2019-9-25_Stack/Bracket.i
-	@echo ... demo/2019-9-25_Stack/Bracket.s
+	@echo ... demo/2019-10-9_Queue/QueueTest.obj
+	@echo ... demo/2019-10-9_Queue/QueueTest.i
+	@echo ... demo/2019-10-9_Queue/QueueTest.s
 .PHONY : help
 
 

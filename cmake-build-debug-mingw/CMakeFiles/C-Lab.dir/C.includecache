@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/Bracket.c
+F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/Queue.h
 stdio.h
 -
 stdlib.h
 -
-Stack.h
-F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/Stack.h
 
-F:/CProgram/CLab/C-Lab/demo/2019-9-25 Stack/Stack.h
-stdio.h
--
+F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/QueueTest.c
+Queue.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/Queue.h
 stdlib.h
+-
+stdio.h
 -
 

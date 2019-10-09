@@ -122,7 +122,7 @@ int GetNonBracketResult(Stack* _stack){
 //        printf("\n   temp = %d\n",temp);
         if((temp == '+')||(temp == '-')){
             int tempNext = Pop(_stack);
-            Push(tempSaver,Calculator(Pop(tempSaver),tempNext,temp));
+            Push(tempSaver,Calculator(tempNext,Pop(tempSaver),temp));
             continue;
         }
         Push(tempSaver,temp);
@@ -174,7 +174,7 @@ int WriteDefault(Stack *_stack) {
     }
 }
 
-int Getresult(Stack *_stack){
+int GetResult(Stack *_stack){
     Stack tempSaver;
     GenerateStack(&tempSaver);
     int temp;
@@ -197,6 +197,6 @@ int main() {
     printf("Input it\n");
     Read(&saver);
 //    WriteDefault(&saver);
-    printf("\nresult is :%d\n", Getresult(&saver));
+    printf("\nresult is :%d\n", GetResult(&saver));
 //     getchar();
 }
