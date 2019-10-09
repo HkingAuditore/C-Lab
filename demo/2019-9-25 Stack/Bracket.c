@@ -1,49 +1,50 @@
-#pragma	 once
+//
+// Created by HkingAuditore on 2019/10/7.
+//
+
 #include <stdio.h>
 #include <stdlib.h>
-#define  STACKMAXSPACE 20
+#include "Stack.h"
 
-
-typedef int StackEnum;
-
-typedef struct stack{
-	int			StackTop;
-	StackEnum*	StackArray;
-}Stack;
-//生成栈
-
-static int GenerateStack(Stack* _stack)
-{
-	_stack->StackArray = (StackEnum*)malloc(sizeof(StackEnum)*STACKMAXSPACE);
-	_stack->StackTop = 0;
-	return 0;
-}
-//进栈
-static int Push(Stack* _stack,StackEnum _data)
-{
-	_stack->StackArray[_stack->StackTop++] = _data;
-	return 0;
-}
-
-//出栈
-static StackEnum Pop(Stack* _stack)
-{
-	return (_stack->StackArray[--_stack->StackTop]);
+//读取单个字符
+int ReadSingleChar(char *_input) {
+    scanf("%c", _input);
+//	 //输入字符是否为数字
+    if ((*_input - '0') >= 0 && (*_input - '0') <= 9) {
+        return 0;
+    } else {
+        if (((*_input == '(') || (*_input == ')'))) {
+            return 1;
+        } else {
+            if ((*_input == '+') || (*_input == '-') || (*_input == '*') || (*_input == '/')) {
+                return 2;
+            } else {
+                if (*_input == '\n') {
+                    return 3;
+                }
+            }
+        }
+    }
+    return 4;
 }
 
-//获取栈长度
-static int GetStackLength(Stack _stack)
-{
-	return (_stack.StackTop);
-}
+//连接多个字符
+int ReadChar2Action(Stack *_stack) {
+    char input;
+    int judge = ReadSingleChar(&input);
+    switch (judge) {
+        case 0:
+            return (input - '0');
+        case 1:
+            if(input == '('){
+                Push(_stack, -1);
+                return -1;
+            }else{
+                Push(_stack,-2);
+                return -1;
+            }
 
-//是否为空栈
-static int IsEmptyStack(Stack _stack)
-{
-	return (_stack.StackTop ? 0 : 1);
-}
-
-
+        case 2:
             Push(_stack, input);
 //            printf("2--*--IN:%d\n",input);
             return -2;
