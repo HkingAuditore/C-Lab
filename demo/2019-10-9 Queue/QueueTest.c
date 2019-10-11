@@ -5,16 +5,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main(){
-    printf("Test!\n");
-    Queue* queuetest = GenerateQueue();
-    printf("Input:");
-    for(int i=0;i<10;i++){
-        printf("%d ",i);
-        Push(queuetest,i);
-    }
-    printf("\nOutput:");
-    for(int i=0;i<10;i++){
-        printf("%d ",Pop(queuetest));
-    }
-}
+//int main(){
+//    printf("Test!\n");
+//    Queue* queuetest = GenerateQueue();
+//    printf("Input:");
+//    for(int i=0;i<10;i++){
+//        printf("%d ",i);
+//        Push(queuetest,i);
+//    }
+//    printf("\nOutput:");
+//    for(int i=0;i<10;i++){
+//        printf("%d ",Pop(queuetest));
+//    }
+//    // Destroy(&queuetest);
+//    // Pop(&queuetest);
+//}

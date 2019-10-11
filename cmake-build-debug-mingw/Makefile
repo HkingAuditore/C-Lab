@@ -122,32 +122,32 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/2019-10-9_Queue/QueueTest.obj: demo/2019-10-9_Queue/QueueTest.c.obj
+demo/2019-10-9_Queue/GameQueueEvent.obj: demo/2019-10-9_Queue/GameQueueEvent.c.obj
 
-.PHONY : demo/2019-10-9_Queue/QueueTest.obj
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.obj
 
 # target to build an object file
-demo/2019-10-9_Queue/QueueTest.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.obj
-.PHONY : demo/2019-10-9_Queue/QueueTest.c.obj
+demo/2019-10-9_Queue/GameQueueEvent.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.obj
 
-demo/2019-10-9_Queue/QueueTest.i: demo/2019-10-9_Queue/QueueTest.c.i
+demo/2019-10-9_Queue/GameQueueEvent.i: demo/2019-10-9_Queue/GameQueueEvent.c.i
 
-.PHONY : demo/2019-10-9_Queue/QueueTest.i
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.i
 
 # target to preprocess a source file
-demo/2019-10-9_Queue/QueueTest.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.i
-.PHONY : demo/2019-10-9_Queue/QueueTest.c.i
+demo/2019-10-9_Queue/GameQueueEvent.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.i
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.i
 
-demo/2019-10-9_Queue/QueueTest.s: demo/2019-10-9_Queue/QueueTest.c.s
+demo/2019-10-9_Queue/GameQueueEvent.s: demo/2019-10-9_Queue/GameQueueEvent.c.s
 
-.PHONY : demo/2019-10-9_Queue/QueueTest.s
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.s
 
 # target to generate assembly for a file
-demo/2019-10-9_Queue/QueueTest.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/QueueTest.c.s
-.PHONY : demo/2019-10-9_Queue/QueueTest.c.s
+demo/2019-10-9_Queue/GameQueueEvent.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.s
+.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/2019-10-9_Queue/QueueTest.obj
-	@echo ... demo/2019-10-9_Queue/QueueTest.i
-	@echo ... demo/2019-10-9_Queue/QueueTest.s
+	@echo ... demo/2019-10-9_Queue/GameQueueEvent.obj
+	@echo ... demo/2019-10-9_Queue/GameQueueEvent.i
+	@echo ... demo/2019-10-9_Queue/GameQueueEvent.s
 .PHONY : help
 
 
