@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2019-9-25 Stack\Stack.h" />
+    <ClCompile Include="2019-10-12 String\KMPTest.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-9-25 Stack\Bracket.c" />
+    <ClInclude Include="2019-10-12 String\String.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

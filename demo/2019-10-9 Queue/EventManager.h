@@ -81,16 +81,7 @@ static int Push(Queue *_queue, DataEnum _data) {
 
 //是否为空队列
 static int IsEmptyQueue(const Queue *_queue) {
-    if (!_queue->Head->Next) {
-        return 1;
-    } else {
-        return 0;
-    }
-//    if (_queue->Length==0) {
-//        return 1;
-//    } else {
-//        return 0;
-//    }
+    return !_queue->Head->Next?1:0;
 }
 
 //输出结点

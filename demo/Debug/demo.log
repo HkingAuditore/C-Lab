@@ -1,5 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(demo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
-  Bracket.c
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\bracket.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-f:\cprogram\clab\c-lab\demo\2019-9-25 stack\bracket.c(79): warning C4716: “Write”: 必须返回一个值
+  KMPTest.c
+f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(41): warning C4716: “WriteInfo”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(34): warning C4716: “WriteString”: 必须返回一个值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe

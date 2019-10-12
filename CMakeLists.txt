@@ -3,4 +3,4 @@ project(C-Lab C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_BUILD_TYPE Debug)
-add_executable(C-Lab "demo/2019-10-9 Queue/GameQueueEvent.c")
+add_executable(C-Lab "demo/2019-10-9 Queue/GameQueueEvent.c" "demo/2019-10-12 String/KMPTest.c" "demo/2019-10-12 String/String.h")

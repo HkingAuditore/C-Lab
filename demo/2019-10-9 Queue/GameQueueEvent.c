@@ -10,12 +10,9 @@ static int _Clock = 0;
 
 //是否满足游戏人数条件
 int IsPlayerEnough(Queue* _gameQueue,int _maxPlayer){
-    if(_gameQueue->Length == _maxPlayer){
-        return 1;
-    }else{
-        return 0;
-    }
+    return _gameQueue->Length == _maxPlayer?1:0;
 }
+
 //输出玩家等待时间
 void PrintPlayerInfo(Event _player){
     printf("No.%d LEVEL:%d Wait %d TIME\n",_player.EventObject.Id,_player.EventObject.Level,_Clock-_player.RegisterTime);
@@ -29,21 +26,21 @@ int GameStart(Queue* _gameQueue,int _maxPlayer){
     printf("---------START--------\n");
 }
 
-int main() {
-    InitRandSeed();
-    Queue *gameQueue = GenerateQueue();
-
-    for (int i = 0; i < 10; i++) {
-//        printf("now at %d\n",i);
-        RegisterEvent(gameQueue, i, _MaxItem, &_Clock, 1, 5);
-        if(IsPlayerEnough(gameQueue,5)){
-            GameStart(gameQueue,5);
-        }
-    }
+//int main() {
+//    InitRandSeed();
+//    Queue *gameQueue = GenerateQueue();
+//
+//    for (int i = 0; i < 10; i++) {
+////        printf("now at %d\n",i);
+//        RegisterEvent(gameQueue, i, _MaxItem, &_Clock, 1, 5);
+//        if(IsPlayerEnough(gameQueue,5)){
+//            GameStart(gameQueue,5);
+//        }
+//    }
 //    while (!IsEmptyQueue(gameQueue)){
 //        Event temp = Pop(gameQueue);
 //        printf("No.%d LEVEL :%d  ,instanced at : %d TIME\n",temp.EventObject.Id,temp.EventObject.Level,temp.RegisterTime);
 //    }
 
 
-}
+//}

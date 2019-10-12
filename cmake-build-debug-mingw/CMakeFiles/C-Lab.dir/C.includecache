@@ -6,31 +6,19 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/EventManager.h
-stdio.h
--
-time.h
--
-math.h
--
+F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/KMPTest.c
 stdlib.h
 -
-SystemBase.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/SystemBase.h
+stdio.h
+-
+String.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/GameQueueEvent.c
+F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
 stdlib.h
 -
 stdio.h
 -
-EventManager.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/EventManager.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/SystemBase.h
-stdio.h
--
-time.h
--
-stdlib.h
+string.h
 -
 

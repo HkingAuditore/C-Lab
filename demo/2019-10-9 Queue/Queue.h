@@ -6,6 +6,18 @@
 //数据元素
 typedef int DataEnum;
 
+//单个队列节点
+typedef struct queueNode {
+    DataEnum Data;    //    数据存储
+    struct queueNode *Next;    //    下一节点指针
+} QueueNode;
+
+//队列
+typedef struct queue {
+    QueueNode *Head;    //    头
+    QueueNode *CurPos;    //    当前位置
+    int Length;    //    队列长度
+} Queue;
 //初始化结点
 static QueueNode *GenerateNode(DataEnum _data)
 {
