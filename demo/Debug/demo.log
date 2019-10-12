@@ -1,5 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(demo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
   KMPTest.c
-f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(41): warning C4716: “WriteInfo”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(34): warning C4716: “WriteString”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(41): warning C4716: “WriteString”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-10-12 string\string.h(50): warning C4716: “WriteInfo”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-10-12 string\kmptest.c(69): warning C4715: “Compare”: 不是所有的控件路径都返回值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe
