@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "eventmanager.h": "c"
-    }
+    },
+    "vsicons.presets.angular": true
 }
