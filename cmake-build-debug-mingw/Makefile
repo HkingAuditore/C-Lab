@@ -149,6 +149,33 @@ demo/2019-10-12_String/KMPTest.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.s
 .PHONY : demo/2019-10-12_String/KMPTest.c.s
 
+demo/2019-10-12_String/StringTest.obj: demo/2019-10-12_String/StringTest.c.obj
+
+.PHONY : demo/2019-10-12_String/StringTest.obj
+
+# target to build an object file
+demo/2019-10-12_String/StringTest.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj
+.PHONY : demo/2019-10-12_String/StringTest.c.obj
+
+demo/2019-10-12_String/StringTest.i: demo/2019-10-12_String/StringTest.c.i
+
+.PHONY : demo/2019-10-12_String/StringTest.i
+
+# target to preprocess a source file
+demo/2019-10-12_String/StringTest.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.i
+.PHONY : demo/2019-10-12_String/StringTest.c.i
+
+demo/2019-10-12_String/StringTest.s: demo/2019-10-12_String/StringTest.c.s
+
+.PHONY : demo/2019-10-12_String/StringTest.s
+
+# target to generate assembly for a file
+demo/2019-10-12_String/StringTest.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s
+.PHONY : demo/2019-10-12_String/StringTest.c.s
+
 demo/2019-10-9_Queue/GameQueueEvent.obj: demo/2019-10-9_Queue/GameQueueEvent.c.obj
 
 .PHONY : demo/2019-10-9_Queue/GameQueueEvent.obj
@@ -188,6 +215,9 @@ help:
 	@echo ... demo/2019-10-12_String/KMPTest.obj
 	@echo ... demo/2019-10-12_String/KMPTest.i
 	@echo ... demo/2019-10-12_String/KMPTest.s
+	@echo ... demo/2019-10-12_String/StringTest.obj
+	@echo ... demo/2019-10-12_String/StringTest.i
+	@echo ... demo/2019-10-12_String/StringTest.s
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.obj
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.i
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.s

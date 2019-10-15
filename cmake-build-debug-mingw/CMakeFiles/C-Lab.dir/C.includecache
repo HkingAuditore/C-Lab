@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/KMPTest.c
-stdlib.h
--
-stdio.h
--
-String.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
-
 F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
 stdlib.h
 -
@@ -21,4 +13,8 @@ stdio.h
 -
 string.h
 -
+
+F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/StringTest.c
+String.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
 

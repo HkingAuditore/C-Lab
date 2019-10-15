@@ -80,6 +80,9 @@
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h">
 			<Option target="C-Lab"/>
 		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/StringTest.c">
+			<Option target="C-Lab"/>
+		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-9 Queue/GameQueueEvent.c">
 			<Option target="C-Lab"/>
 		</Unit>
