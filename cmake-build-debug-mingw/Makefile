@@ -176,6 +176,33 @@ demo/2019-10-12_String/StringTest.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s
 .PHONY : demo/2019-10-12_String/StringTest.c.s
 
+demo/2019-10-17_Array/MatrixStorage.obj: demo/2019-10-17_Array/MatrixStorage.c.obj
+
+.PHONY : demo/2019-10-17_Array/MatrixStorage.obj
+
+# target to build an object file
+demo/2019-10-17_Array/MatrixStorage.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj
+.PHONY : demo/2019-10-17_Array/MatrixStorage.c.obj
+
+demo/2019-10-17_Array/MatrixStorage.i: demo/2019-10-17_Array/MatrixStorage.c.i
+
+.PHONY : demo/2019-10-17_Array/MatrixStorage.i
+
+# target to preprocess a source file
+demo/2019-10-17_Array/MatrixStorage.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.i
+.PHONY : demo/2019-10-17_Array/MatrixStorage.c.i
+
+demo/2019-10-17_Array/MatrixStorage.s: demo/2019-10-17_Array/MatrixStorage.c.s
+
+.PHONY : demo/2019-10-17_Array/MatrixStorage.s
+
+# target to generate assembly for a file
+demo/2019-10-17_Array/MatrixStorage.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.s
+.PHONY : demo/2019-10-17_Array/MatrixStorage.c.s
+
 demo/2019-10-9_Queue/GameQueueEvent.obj: demo/2019-10-9_Queue/GameQueueEvent.c.obj
 
 .PHONY : demo/2019-10-9_Queue/GameQueueEvent.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... demo/2019-10-12_String/StringTest.obj
 	@echo ... demo/2019-10-12_String/StringTest.i
 	@echo ... demo/2019-10-12_String/StringTest.s
+	@echo ... demo/2019-10-17_Array/MatrixStorage.obj
+	@echo ... demo/2019-10-17_Array/MatrixStorage.i
+	@echo ... demo/2019-10-17_Array/MatrixStorage.s
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.obj
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.i
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.s

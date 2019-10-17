@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
+stdio.h
+-
+stdlib.h
+-
+
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixBase.h
 stdlib.h
 -
 stdio.h
 -
-string.h
+stdarg.h
 -
+ArrayBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/StringTest.c
-String.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-12 String/String.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixStorage.c
+ArrayBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
+MatrixBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixBase.h
+stdlib.h
+-
+stdio.h
+-
 
