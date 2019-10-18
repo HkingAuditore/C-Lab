@@ -10,4 +10,13 @@
 int main(){
     Matrix* matrix =GenerateMatrix(3,3,9,1,0,0,2,3,0,4,5,6);
     WriteMatrix(*matrix);
+    printf("Is %c Triangle\n",IsTriangleMatrix(*matrix)?' ':'n');
+    printf("-------------------\n");
+    MatrixStorage* storage= SaveTriangle(*matrix);
+    for (int i = 0; i < storage->Num; ++i) {
+        printf("%d:%d\n",i,storage->Data[i]);
+    }
+    printf("-------------------\n");
+    Matrix* ReReadMatrix = ReadTriangle(*storage);
+    WriteMatrix(*ReReadMatrix);
 }

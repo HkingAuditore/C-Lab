@@ -19,6 +19,8 @@ stdio.h
 -
 stdarg.h
 -
+math.h
+-
 ArrayBase.h
 F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
 
