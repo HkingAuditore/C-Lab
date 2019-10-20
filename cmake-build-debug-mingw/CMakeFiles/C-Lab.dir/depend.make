@@ -6,8 +6,9 @@ CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj: ../demo/2019-10-12\ S
 CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj: ../demo/2019-10-12\ String/String.h
 CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj: ../demo/2019-10-12\ String/StringTest.c
 
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj: ../demo/2019-10-17\ Array/ArrayBase.h
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj: ../demo/2019-10-17\ Array/MatrixBase.h
+CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj: ../demo/2019-10-17\ Array/ArrayBase.h
+CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj: ../demo/2019-10-17\ Array/ArrayTest.c
+
 CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj: ../demo/2019-10-17\ Array/MatrixStorage.c
 
 CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj: ../demo/2019-10-9\ Queue/EventManager.h

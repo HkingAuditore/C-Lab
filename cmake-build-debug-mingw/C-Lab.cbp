@@ -86,6 +86,9 @@
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h">
 			<Option target="C-Lab"/>
 		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayTest.c">
+			<Option target="C-Lab"/>
+		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixBase.h">
 			<Option target="C-Lab"/>
 		</Unit>

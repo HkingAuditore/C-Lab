@@ -7,12 +7,16 @@
 #IncludeRegexTransform: 
 
 F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
-stdio.h
--
 stdlib.h
 -
+stdio.h
+-
+stdarg.h
+-
+math.h
+-
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayTest.c
 stdlib.h
 -
 stdio.h
@@ -23,14 +27,4 @@ math.h
 -
 ArrayBase.h
 F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixStorage.c
-ArrayBase.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/ArrayBase.h
-MatrixBase.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-17 Array/MatrixBase.h
-stdlib.h
--
-stdio.h
--
 

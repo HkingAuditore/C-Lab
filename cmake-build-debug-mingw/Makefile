@@ -176,6 +176,33 @@ demo/2019-10-12_String/StringTest.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s
 .PHONY : demo/2019-10-12_String/StringTest.c.s
 
+demo/2019-10-17_Array/ArrayTest.obj: demo/2019-10-17_Array/ArrayTest.c.obj
+
+.PHONY : demo/2019-10-17_Array/ArrayTest.obj
+
+# target to build an object file
+demo/2019-10-17_Array/ArrayTest.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj
+.PHONY : demo/2019-10-17_Array/ArrayTest.c.obj
+
+demo/2019-10-17_Array/ArrayTest.i: demo/2019-10-17_Array/ArrayTest.c.i
+
+.PHONY : demo/2019-10-17_Array/ArrayTest.i
+
+# target to preprocess a source file
+demo/2019-10-17_Array/ArrayTest.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.i
+.PHONY : demo/2019-10-17_Array/ArrayTest.c.i
+
+demo/2019-10-17_Array/ArrayTest.s: demo/2019-10-17_Array/ArrayTest.c.s
+
+.PHONY : demo/2019-10-17_Array/ArrayTest.s
+
+# target to generate assembly for a file
+demo/2019-10-17_Array/ArrayTest.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.s
+.PHONY : demo/2019-10-17_Array/ArrayTest.c.s
+
 demo/2019-10-17_Array/MatrixStorage.obj: demo/2019-10-17_Array/MatrixStorage.c.obj
 
 .PHONY : demo/2019-10-17_Array/MatrixStorage.obj
@@ -245,6 +272,9 @@ help:
 	@echo ... demo/2019-10-12_String/StringTest.obj
 	@echo ... demo/2019-10-12_String/StringTest.i
 	@echo ... demo/2019-10-12_String/StringTest.s
+	@echo ... demo/2019-10-17_Array/ArrayTest.obj
+	@echo ... demo/2019-10-17_Array/ArrayTest.i
+	@echo ... demo/2019-10-17_Array/ArrayTest.s
 	@echo ... demo/2019-10-17_Array/MatrixStorage.obj
 	@echo ... demo/2019-10-17_Array/MatrixStorage.i
 	@echo ... demo/2019-10-17_Array/MatrixStorage.s
