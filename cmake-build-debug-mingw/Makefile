@@ -230,6 +230,33 @@ demo/2019-10-17_Array/MatrixStorage.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.s
 .PHONY : demo/2019-10-17_Array/MatrixStorage.c.s
 
+demo/2019-10-25_Tree/TreeTest.obj: demo/2019-10-25_Tree/TreeTest.c.obj
+
+.PHONY : demo/2019-10-25_Tree/TreeTest.obj
+
+# target to build an object file
+demo/2019-10-25_Tree/TreeTest.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj
+.PHONY : demo/2019-10-25_Tree/TreeTest.c.obj
+
+demo/2019-10-25_Tree/TreeTest.i: demo/2019-10-25_Tree/TreeTest.c.i
+
+.PHONY : demo/2019-10-25_Tree/TreeTest.i
+
+# target to preprocess a source file
+demo/2019-10-25_Tree/TreeTest.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.i
+.PHONY : demo/2019-10-25_Tree/TreeTest.c.i
+
+demo/2019-10-25_Tree/TreeTest.s: demo/2019-10-25_Tree/TreeTest.c.s
+
+.PHONY : demo/2019-10-25_Tree/TreeTest.s
+
+# target to generate assembly for a file
+demo/2019-10-25_Tree/TreeTest.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.s
+.PHONY : demo/2019-10-25_Tree/TreeTest.c.s
+
 demo/2019-10-9_Queue/GameQueueEvent.obj: demo/2019-10-9_Queue/GameQueueEvent.c.obj
 
 .PHONY : demo/2019-10-9_Queue/GameQueueEvent.obj
@@ -278,6 +305,9 @@ help:
 	@echo ... demo/2019-10-17_Array/MatrixStorage.obj
 	@echo ... demo/2019-10-17_Array/MatrixStorage.i
 	@echo ... demo/2019-10-17_Array/MatrixStorage.s
+	@echo ... demo/2019-10-25_Tree/TreeTest.obj
+	@echo ... demo/2019-10-25_Tree/TreeTest.i
+	@echo ... demo/2019-10-25_Tree/TreeTest.s
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.obj
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.i
 	@echo ... demo/2019-10-9_Queue/GameQueueEvent.s
