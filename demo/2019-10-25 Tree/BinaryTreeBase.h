@@ -18,10 +18,10 @@ typedef struct binaryTreeNode {
     int Num;
     struct binaryTreeNode *Parent, *LeftChild, *RightChild;
 } BinaryTreeNode;
-typedef struct binaryTreeLiner {
+typedef struct binaryTreeLinear {
     BinaryTreeNode **Root;
     int NumOfNode;
-} BinaryTreeLiner;
+} BinaryTreeLinear;
 typedef struct binaryTreeLinking {
     BinaryTreeNode *Root;
     int NumOfNode;
@@ -29,7 +29,7 @@ typedef struct binaryTreeLinking {
 
 
 typedef union binaryTreePointer {
-    BinaryTreeLiner *LinerTree;
+    BinaryTreeLinear *LinearTree;
     BinaryTreeLinking *LinkingTree;
 } BinaryTreePointer;
 
@@ -43,8 +43,8 @@ typedef struct binaryTree {
 
 int _Nodes2Created[8] = {0, 1, 2, 3, 5, 6, 7, 0};
 
-static BinaryTreeLiner *GenerateBinaryTreeInLinerSaver() {
-    BinaryTreeLiner *tree = (BinaryTreeLiner *) calloc(1, sizeof(BinaryTreeLiner));
+static BinaryTreeLinear *GenerateBinaryTreeInLinearSaver() {
+    BinaryTreeLinear *tree = (BinaryTreeLinear *) calloc(1, sizeof(BinaryTreeLinear));
     tree->Root = (BinaryTreeNode **) calloc(MAXNUMOFNODE + 1, sizeof(BinaryTreeNode *));
     BinaryTreeNode *curPos;
     int numOfNode = NUMOFNODE;
@@ -75,7 +75,7 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
     scanf("%d", &data);
     getchar();
     node->Data = data;
-    printf("是否有左子树？Y/N\n");
+    printf("数据为 %d 的节点是否有左子树？Y/N\n",data);
     char isLeftChild;
     scanf("%c", &isLeftChild);
     getchar();
@@ -84,7 +84,7 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
     } else {
         node->LeftChild = NULL;
     }
-    printf("是否有右子树？Y/N\n");
+    printf("数据为 %d 的节点是否有右子树？Y/N\n",data);
     char isRightChild;
     scanf("%c", &isRightChild);
     getchar();
@@ -100,7 +100,7 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
 
 
 static BinaryTreeLinking *GenerateBinaryTreeInLinkingSaver() {
-    BinaryTreeLinking *tree = (BinaryTreeLinking *) malloc(1 * sizeof(BinaryTreeLiner));
+    BinaryTreeLinking *tree = (BinaryTreeLinking *) malloc(1 * sizeof(BinaryTreeLinear));
     tree->Root = CreateBinaryTreeNodeLinking(NULL);
     return tree;
 }
@@ -108,7 +108,7 @@ static BinaryTreeLinking *GenerateBinaryTreeInLinkingSaver() {
 static BinaryTree GenerateBinaryTree(int _type) {
     BinaryTree tree;
     if (_type == 0) {
-        tree.Tree.LinerTree = GenerateBinaryTreeInLinerSaver();
+        tree.Tree.LinearTree = GenerateBinaryTreeInLinearSaver();
         tree.TreeSaverFlag = _type;
     } else if (_type == 1) {
         tree.Tree.LinkingTree = GenerateBinaryTreeInLinkingSaver();
@@ -124,7 +124,7 @@ static DataEnum ReadNode(BinaryTreeNode *_node) {
 }
 
 static void PrintNode(BinaryTreeNode *_node) {
-    printf("%d ", _node->Data);
+    printf("%d ", ReadNode(_node));
 }
 
 static void WriteBinaryTreeLinking(BinaryTreeNode *_node) {
@@ -142,18 +142,18 @@ static void WriteBinaryTree(BinaryTree _tree) {
 
     if (_tree.TreeSaverFlag == 0) {
         int curPos = 1, outputCount = 1;
-        while (outputCount <= _tree.Tree.LinerTree->NumOfNode) {
-            if (!_tree.Tree.LinerTree->Root[curPos]) {
+        while (outputCount <= _tree.Tree.LinearTree->NumOfNode) {
+            if (!_tree.Tree.LinearTree->Root[curPos]) {
                 curPos++;
                 continue;
             } else {
-                printf("num:%d.data:%d,leftChild:%d,rightChild:%d,parent:%d\n", _tree.Tree.LinerTree->Root[curPos]->Num,
-                       _tree.Tree.LinerTree->Root[curPos]->Data,
-                       (_tree.Tree.LinerTree->Root[curPos]->LeftChild)
-                       ? _tree.Tree.LinerTree->Root[curPos]->LeftChild->Num : -1,
-                       (_tree.Tree.LinerTree->Root[curPos]->RightChild)
-                       ? _tree.Tree.LinerTree->Root[curPos]->RightChild->Num : -1,
-                       (_tree.Tree.LinerTree->Root[curPos]->Parent) ? _tree.Tree.LinerTree->Root[curPos]->Parent->Num
+                printf("num:%d.data:%d,leftChild:%d,rightChild:%d,parent:%d\n", _tree.Tree.LinearTree->Root[curPos]->Num,
+                       _tree.Tree.LinearTree->Root[curPos]->Data,
+                       (_tree.Tree.LinearTree->Root[curPos]->LeftChild)
+                       ? _tree.Tree.LinearTree->Root[curPos]->LeftChild->Num : -1,
+                       (_tree.Tree.LinearTree->Root[curPos]->RightChild)
+                       ? _tree.Tree.LinearTree->Root[curPos]->RightChild->Num : -1,
+                       (_tree.Tree.LinearTree->Root[curPos]->Parent) ? _tree.Tree.LinearTree->Root[curPos]->Parent->Num
                                                                     : -1);
             }
             outputCount++;
