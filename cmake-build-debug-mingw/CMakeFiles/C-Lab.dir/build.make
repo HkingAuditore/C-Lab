@@ -56,74 +56,9 @@ include CMakeFiles/C-Lab.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C-Lab.dir/flags.make
 
-CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj: ../demo/2019-10-9\ Queue/GameQueueEvent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-9_Queue\GameQueueEvent.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-9 Queue\GameQueueEvent.c"
-
-CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-9 Queue\GameQueueEvent.c" > CMakeFiles\C-Lab.dir\demo\2019-10-9_Queue\GameQueueEvent.c.i
-
-CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-9 Queue\GameQueueEvent.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-9_Queue\GameQueueEvent.c.s
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj: ../demo/2019-10-12\ String/KMPTest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-12_String\KMPTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\KMPTest.c"
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\KMPTest.c" > CMakeFiles\C-Lab.dir\demo\2019-10-12_String\KMPTest.c.i
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\KMPTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-12_String\KMPTest.c.s
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj: ../demo/2019-10-12\ String/StringTest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-12_String\StringTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\StringTest.c"
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\StringTest.c" > CMakeFiles\C-Lab.dir\demo\2019-10-12_String\StringTest.c.i
-
-CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-12 String\StringTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-12_String\StringTest.c.s
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj: ../demo/2019-10-17\ Array/MatrixStorage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\MatrixStorage.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\MatrixStorage.c"
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\MatrixStorage.c" > CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\MatrixStorage.c.i
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\MatrixStorage.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\MatrixStorage.c.s
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj: ../demo/2019-10-17\ Array/ArrayTest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\ArrayTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\ArrayTest.c"
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\ArrayTest.c" > CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\ArrayTest.c.i
-
-CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-17 Array\ArrayTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-17_Array\ArrayTest.c.s
-
 CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
 CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj: ../demo/2019-10-25\ Tree/TreeTest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-25_Tree\TreeTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-25 Tree\TreeTest.c"
 
 CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.i: cmake_force
@@ -136,27 +71,17 @@ CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.s: cmake_force
 
 # Object files for target C-Lab
 C__Lab_OBJECTS = \
-"CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj" \
 "CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj"
 
 # External object files for target C-Lab
 C__Lab_EXTERNAL_OBJECTS =
 
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/build.make
 C-Lab.exe: CMakeFiles/C-Lab.dir/linklibs.rsp
 C-Lab.exe: CMakeFiles/C-Lab.dir/objects1.rsp
 C-Lab.exe: CMakeFiles/C-Lab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable C-Lab.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable C-Lab.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\C-Lab.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

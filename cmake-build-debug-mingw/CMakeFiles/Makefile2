@@ -73,12 +73,12 @@ preinstall:
 CMakeFiles/C-Lab.dir/all:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/depend
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target C-Lab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2 "Built target C-Lab"
 .PHONY : CMakeFiles/C-Lab.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/C-Lab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/C-Lab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles 0
 .PHONY : CMakeFiles/C-Lab.dir/rule

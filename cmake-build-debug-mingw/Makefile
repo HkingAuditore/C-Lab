@@ -122,114 +122,6 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/2019-10-12_String/KMPTest.obj: demo/2019-10-12_String/KMPTest.c.obj
-
-.PHONY : demo/2019-10-12_String/KMPTest.obj
-
-# target to build an object file
-demo/2019-10-12_String/KMPTest.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.obj
-.PHONY : demo/2019-10-12_String/KMPTest.c.obj
-
-demo/2019-10-12_String/KMPTest.i: demo/2019-10-12_String/KMPTest.c.i
-
-.PHONY : demo/2019-10-12_String/KMPTest.i
-
-# target to preprocess a source file
-demo/2019-10-12_String/KMPTest.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.i
-.PHONY : demo/2019-10-12_String/KMPTest.c.i
-
-demo/2019-10-12_String/KMPTest.s: demo/2019-10-12_String/KMPTest.c.s
-
-.PHONY : demo/2019-10-12_String/KMPTest.s
-
-# target to generate assembly for a file
-demo/2019-10-12_String/KMPTest.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/KMPTest.c.s
-.PHONY : demo/2019-10-12_String/KMPTest.c.s
-
-demo/2019-10-12_String/StringTest.obj: demo/2019-10-12_String/StringTest.c.obj
-
-.PHONY : demo/2019-10-12_String/StringTest.obj
-
-# target to build an object file
-demo/2019-10-12_String/StringTest.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.obj
-.PHONY : demo/2019-10-12_String/StringTest.c.obj
-
-demo/2019-10-12_String/StringTest.i: demo/2019-10-12_String/StringTest.c.i
-
-.PHONY : demo/2019-10-12_String/StringTest.i
-
-# target to preprocess a source file
-demo/2019-10-12_String/StringTest.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.i
-.PHONY : demo/2019-10-12_String/StringTest.c.i
-
-demo/2019-10-12_String/StringTest.s: demo/2019-10-12_String/StringTest.c.s
-
-.PHONY : demo/2019-10-12_String/StringTest.s
-
-# target to generate assembly for a file
-demo/2019-10-12_String/StringTest.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-12_String/StringTest.c.s
-.PHONY : demo/2019-10-12_String/StringTest.c.s
-
-demo/2019-10-17_Array/ArrayTest.obj: demo/2019-10-17_Array/ArrayTest.c.obj
-
-.PHONY : demo/2019-10-17_Array/ArrayTest.obj
-
-# target to build an object file
-demo/2019-10-17_Array/ArrayTest.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.obj
-.PHONY : demo/2019-10-17_Array/ArrayTest.c.obj
-
-demo/2019-10-17_Array/ArrayTest.i: demo/2019-10-17_Array/ArrayTest.c.i
-
-.PHONY : demo/2019-10-17_Array/ArrayTest.i
-
-# target to preprocess a source file
-demo/2019-10-17_Array/ArrayTest.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.i
-.PHONY : demo/2019-10-17_Array/ArrayTest.c.i
-
-demo/2019-10-17_Array/ArrayTest.s: demo/2019-10-17_Array/ArrayTest.c.s
-
-.PHONY : demo/2019-10-17_Array/ArrayTest.s
-
-# target to generate assembly for a file
-demo/2019-10-17_Array/ArrayTest.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/ArrayTest.c.s
-.PHONY : demo/2019-10-17_Array/ArrayTest.c.s
-
-demo/2019-10-17_Array/MatrixStorage.obj: demo/2019-10-17_Array/MatrixStorage.c.obj
-
-.PHONY : demo/2019-10-17_Array/MatrixStorage.obj
-
-# target to build an object file
-demo/2019-10-17_Array/MatrixStorage.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.obj
-.PHONY : demo/2019-10-17_Array/MatrixStorage.c.obj
-
-demo/2019-10-17_Array/MatrixStorage.i: demo/2019-10-17_Array/MatrixStorage.c.i
-
-.PHONY : demo/2019-10-17_Array/MatrixStorage.i
-
-# target to preprocess a source file
-demo/2019-10-17_Array/MatrixStorage.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.i
-.PHONY : demo/2019-10-17_Array/MatrixStorage.c.i
-
-demo/2019-10-17_Array/MatrixStorage.s: demo/2019-10-17_Array/MatrixStorage.c.s
-
-.PHONY : demo/2019-10-17_Array/MatrixStorage.s
-
-# target to generate assembly for a file
-demo/2019-10-17_Array/MatrixStorage.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-17_Array/MatrixStorage.c.s
-.PHONY : demo/2019-10-17_Array/MatrixStorage.c.s
-
 demo/2019-10-25_Tree/TreeTest.obj: demo/2019-10-25_Tree/TreeTest.c.obj
 
 .PHONY : demo/2019-10-25_Tree/TreeTest.obj
@@ -257,33 +149,6 @@ demo/2019-10-25_Tree/TreeTest.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.s
 .PHONY : demo/2019-10-25_Tree/TreeTest.c.s
 
-demo/2019-10-9_Queue/GameQueueEvent.obj: demo/2019-10-9_Queue/GameQueueEvent.c.obj
-
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.obj
-
-# target to build an object file
-demo/2019-10-9_Queue/GameQueueEvent.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.obj
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.obj
-
-demo/2019-10-9_Queue/GameQueueEvent.i: demo/2019-10-9_Queue/GameQueueEvent.c.i
-
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.i
-
-# target to preprocess a source file
-demo/2019-10-9_Queue/GameQueueEvent.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.i
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.i
-
-demo/2019-10-9_Queue/GameQueueEvent.s: demo/2019-10-9_Queue/GameQueueEvent.c.s
-
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.s
-
-# target to generate assembly for a file
-demo/2019-10-9_Queue/GameQueueEvent.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-9_Queue/GameQueueEvent.c.s
-.PHONY : demo/2019-10-9_Queue/GameQueueEvent.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -293,24 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/2019-10-12_String/KMPTest.obj
-	@echo ... demo/2019-10-12_String/KMPTest.i
-	@echo ... demo/2019-10-12_String/KMPTest.s
-	@echo ... demo/2019-10-12_String/StringTest.obj
-	@echo ... demo/2019-10-12_String/StringTest.i
-	@echo ... demo/2019-10-12_String/StringTest.s
-	@echo ... demo/2019-10-17_Array/ArrayTest.obj
-	@echo ... demo/2019-10-17_Array/ArrayTest.i
-	@echo ... demo/2019-10-17_Array/ArrayTest.s
-	@echo ... demo/2019-10-17_Array/MatrixStorage.obj
-	@echo ... demo/2019-10-17_Array/MatrixStorage.i
-	@echo ... demo/2019-10-17_Array/MatrixStorage.s
 	@echo ... demo/2019-10-25_Tree/TreeTest.obj
 	@echo ... demo/2019-10-25_Tree/TreeTest.i
 	@echo ... demo/2019-10-25_Tree/TreeTest.s
-	@echo ... demo/2019-10-9_Queue/GameQueueEvent.obj
-	@echo ... demo/2019-10-9_Queue/GameQueueEvent.i
-	@echo ... demo/2019-10-9_Queue/GameQueueEvent.s
 .PHONY : help
 
 

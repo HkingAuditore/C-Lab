@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTree.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeBase.h
 stdio.h
 -
 stdlib.h
 -
 
+F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeLinkBase.h
+stdlib.h
+-
+stdio.h
+-
+
 F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/TreeTest.c
-BinaryTree.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTree.h
+BinaryTreeBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeBase.h
+BinaryTreeLinkBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeLinkBase.h
 
