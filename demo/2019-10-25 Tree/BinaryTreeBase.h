@@ -10,7 +10,7 @@
 //#include "BinaryTreeTraversal.h"
 
 #define NUMOFNODE 6
-#define MAXNUMOFNODE 30
+#define MAXNUMOFNODE 100
 
 typedef int DataEnum;
 typedef struct binaryTreeNode {
@@ -39,34 +39,86 @@ typedef struct binaryTree {
     int TreeSaverFlag;
 } BinaryTree;
 
+enum LeftOrRight {
+    Left = 0, Right = 1
+};
+
 //typedef BinaryTreeNode *BinaryTree;
 
 int _Nodes2Created[8] = {0, 1, 2, 3, 5, 6, 7, 0};
 
+//生成线性存储二叉树节点
+static BinaryTreeNode *CreateBinaryTreeNodeLinear(BinaryTreeLinear* _tree, BinaryTreeNode *_parent, enum LeftOrRight _childType) {
+    BinaryTreeNode *node = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode) * 1);
+    if(_parent){
+        node->Num = _parent->Num * 2 + (int) _childType;
+    }else{
+        node->Num = 1;
+    }
+
+    _tree->Root[node->Num]=node;
+    node->Parent = _parent;
+    printf("请输入数据\n");
+    int data;
+    scanf("%d", &data);
+    getchar();
+    node->Data = data;
+    printf("数据为 %d 的节点是否有左子树？Y/N\n", data);
+    char isLeftChild;
+    scanf("%c", &isLeftChild);
+    getchar();
+    if (isLeftChild == 'Y') {
+        node->LeftChild = CreateBinaryTreeNodeLinear(_tree, node, Left);
+    } else {
+        node->LeftChild = NULL;
+    }
+    printf("数据为 %d 的节点是否有右子树？Y/N\n", data);
+    char isRightChild;
+    scanf("%c", &isRightChild);
+    getchar();
+    if (isRightChild == 'Y') {
+        node->RightChild = CreateBinaryTreeNodeLinear(_tree, node, Right);
+    } else {
+        node->RightChild = NULL;
+    }
+
+    return node;
+
+}
+
+
+//生成线性存储二叉树
 static BinaryTreeLinear *GenerateBinaryTreeInLinearSaver() {
+//    BinaryTreeLinear *tree = (BinaryTreeLinear *) calloc(1, sizeof(BinaryTreeLinear));
+//    tree->Root = (BinaryTreeNode **) calloc(MAXNUMOFNODE + 1, sizeof(BinaryTreeNode *));
+//    BinaryTreeNode *curPos;
+//    int numOfNode = NUMOFNODE;
+//    for (int i = 1; i <= NUMOFNODE; ++i) {
+//        curPos = calloc(1, sizeof(BinaryTreeNode));
+//        curPos->Data = i;
+//        curPos->Num = _Nodes2Created[i];
+//        tree->Root[_Nodes2Created[i]] = curPos;
+//        if (tree->Root[_Nodes2Created[i] / 2]) {
+////            双亲匹配
+//            if (_Nodes2Created[i] % 2) {
+//                tree->Root[_Nodes2Created[i] / 2]->RightChild = curPos;
+//                curPos->Parent = tree->Root[_Nodes2Created[i] / 2];
+//            } else {
+//                tree->Root[_Nodes2Created[i] / 2]->LeftChild = curPos;
+//                curPos->Parent = tree->Root[_Nodes2Created[i] / 2];
+//            }
+//        }
+//    }
+//    tree->NumOfNode = NUMOFNODE;
+//    printf("DONE!\n");
+//    return tree;
     BinaryTreeLinear *tree = (BinaryTreeLinear *) calloc(1, sizeof(BinaryTreeLinear));
     tree->Root = (BinaryTreeNode **) calloc(MAXNUMOFNODE + 1, sizeof(BinaryTreeNode *));
-    BinaryTreeNode *curPos;
-    int numOfNode = NUMOFNODE;
-    for (int i = 1; i <= NUMOFNODE; ++i) {
-        curPos = calloc(1, sizeof(BinaryTreeNode));
-        curPos->Data = i;
-        curPos->Num = _Nodes2Created[i];
-        tree->Root[_Nodes2Created[i]] = curPos;
-        if (tree->Root[_Nodes2Created[i] / 2]) {
-            if (_Nodes2Created[i] % 2) {
-                tree->Root[_Nodes2Created[i] / 2]->RightChild = curPos;
-                curPos->Parent = tree->Root[_Nodes2Created[i] / 2];
-            } else {
-                tree->Root[_Nodes2Created[i] / 2]->LeftChild = curPos;
-                curPos->Parent = tree->Root[_Nodes2Created[i] / 2];
-            }
-        }
-    }
-    tree->NumOfNode = NUMOFNODE;
+    CreateBinaryTreeNodeLinear(tree,NULL,0);
     return tree;
 }
 
+//生成链式存储二叉树节点
 static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
     BinaryTreeNode *node = (BinaryTreeNode *) malloc(sizeof(BinaryTreeNode) * 1);
     node->Parent = _parent;
@@ -75,7 +127,7 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
     scanf("%d", &data);
     getchar();
     node->Data = data;
-    printf("数据为 %d 的节点是否有左子树？Y/N\n",data);
+    printf("数据为 %d 的节点是否有左子树？Y/N\n", data);
     char isLeftChild;
     scanf("%c", &isLeftChild);
     getchar();
@@ -84,7 +136,7 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
     } else {
         node->LeftChild = NULL;
     }
-    printf("数据为 %d 的节点是否有右子树？Y/N\n",data);
+    printf("数据为 %d 的节点是否有右子树？Y/N\n", data);
     char isRightChild;
     scanf("%c", &isRightChild);
     getchar();
@@ -98,13 +150,14 @@ static BinaryTreeNode *CreateBinaryTreeNodeLinking(BinaryTreeNode *_parent) {
 
 }
 
-
+//生成链式存储二叉树
 static BinaryTreeLinking *GenerateBinaryTreeInLinkingSaver() {
     BinaryTreeLinking *tree = (BinaryTreeLinking *) malloc(1 * sizeof(BinaryTreeLinear));
     tree->Root = CreateBinaryTreeNodeLinking(NULL);
     return tree;
 }
 
+//按需求生成二叉树
 static BinaryTree GenerateBinaryTree(int _type) {
     BinaryTree tree;
     if (_type == 0) {
@@ -119,14 +172,17 @@ static BinaryTree GenerateBinaryTree(int _type) {
     return tree;
 }
 
+//读树节点
 static DataEnum ReadNode(BinaryTreeNode *_node) {
     return _node->Data;
 }
 
+//打印节点
 static void PrintNode(BinaryTreeNode *_node) {
     printf("%d ", ReadNode(_node));
 }
 
+//遍历（测试）
 static void WriteBinaryTreeLinking(BinaryTreeNode *_node) {
     if (_node) {
         PrintNode(_node);
@@ -136,7 +192,7 @@ static void WriteBinaryTreeLinking(BinaryTreeNode *_node) {
 
 }
 
-
+//打印树
 static void WriteBinaryTree(BinaryTree _tree) {
 //    printf("IN WRITE!\n");
 
@@ -147,14 +203,15 @@ static void WriteBinaryTree(BinaryTree _tree) {
                 curPos++;
                 continue;
             } else {
-                printf("num:%d.data:%d,leftChild:%d,rightChild:%d,parent:%d\n", _tree.Tree.LinearTree->Root[curPos]->Num,
+                printf("num:%d.data:%d,leftChild:%d,rightChild:%d,parent:%d\n",
+                       _tree.Tree.LinearTree->Root[curPos]->Num,
                        _tree.Tree.LinearTree->Root[curPos]->Data,
                        (_tree.Tree.LinearTree->Root[curPos]->LeftChild)
                        ? _tree.Tree.LinearTree->Root[curPos]->LeftChild->Num : -1,
                        (_tree.Tree.LinearTree->Root[curPos]->RightChild)
                        ? _tree.Tree.LinearTree->Root[curPos]->RightChild->Num : -1,
                        (_tree.Tree.LinearTree->Root[curPos]->Parent) ? _tree.Tree.LinearTree->Root[curPos]->Parent->Num
-                                                                    : -1);
+                                                                     : -1);
             }
             outputCount++;
             curPos++;

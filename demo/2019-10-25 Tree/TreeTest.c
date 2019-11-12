@@ -1,10 +1,11 @@
 //
 // Created by HkingAuditore 2019/10/25.
 //
-#include "BinaryTreeBase.h"
-#include "BinaryTreeLinkBase.h"
+
+
+#include "BinaryTreeTraversal.h"
 
 int main(){
-    BinaryTree tree = GenerateBinaryTree(1);
-    WriteBinaryTree(tree);
+    BinaryTree tree = GenerateBinaryTree(0);
+    RecursionDLR(&tree);
 }
