@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/TreeTest.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj"
+  "F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/UnionFindTest.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "C-Lab.exe"
   "C-Lab.exe.manifest"
   "C-Lab.pdb"
-  "CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/TreeTest.c.obj"
+  "CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj"
   "libC-Lab.dll.a"
 )
 
