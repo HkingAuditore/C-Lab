@@ -225,19 +225,19 @@ static void BinaryLRD(BinaryTree *_tree, int _mode) {
 }
 
 //遍历最终函数
-static void TraversalBinaryTree(BinaryTree *_tree, int _type, int _inType) {
+static void TraversalBinaryTree(BinaryTree *_tree, int _type, int _mode) {
     switch (_type) {
         case 0:
             printf("DLR前序");
-            BinaryDLR(_tree, _inType);
+            BinaryDLR(_tree, _mode);
             break;
         case 1:
             printf("LDR中序");
-            BinaryLDR(_tree, _inType);
+            BinaryLDR(_tree, _mode);
             break;
         case 2:
             printf("LRD后序");
-            BinaryLRD(_tree, _inType);
+            BinaryLRD(_tree, _mode);
             break;
         default:
             printf("ERROR!");

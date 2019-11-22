@@ -5,12 +5,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "UnionFind.h"
+//#include "BinaryTreeTraversal.h"
 
 int main(){
     Forest forestTest = GenerateForest();
-    for (int i = 0; i <3 ; ++i) {
-        NewTreeInForest(&forestTest);
+    for (int i = 0; i <5 ; ++i) {
+        InteractiveLinkChild(&forestTest);
     }
-    ShowForest(forestTest);
+//    InteractiveLinkChild(&forestTest);
+//    InteractiveLinkChild(&forestTest);
+//    InteractiveLinkChild(&forestTest);
+    TraversalForest(forestTest);
 
 }

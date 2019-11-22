@@ -5,7 +5,7 @@
 #ifndef C_LAB_FOREST_H
 #define C_LAB_FOREST_H
 
-#include "BinaryTreeBase.h"
+#include "BinaryTreeTraversal.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -39,12 +39,16 @@ ForestTree *GenerateForestTree(int _rootData) {
 
 ForestTree* NewForestTree(){
     int rootData;
-    printf("\n请输入树根数据：");
+    printf("请输入树根数据：");
     scanf("%d",&rootData);
     ForestTree* tree =GenerateForestTree(rootData);
     return tree;
 }
 
+ForestTree* NewForestTreeNonInput(DataEnum _data){
+    ForestTree* tree =GenerateForestTree(_data);
+    return tree;
+}
 
 
 //将生成的树放入森林
@@ -63,6 +67,10 @@ Forest *LinkTree2Forest(ForestTree *_tree, Forest *_forest) {
 //由用户新建一棵树，并把它放进森林
 void NewTreeInForest(Forest* _forest){
     LinkTree2Forest(NewForestTree(),_forest);
+}
+
+void NewTreeInForestNonInPut(Forest* _forest,DataEnum _data){
+    LinkTree2Forest(NewForestTreeNonInput(_data),_forest);
 }
 
 
