@@ -56,27 +56,27 @@ include CMakeFiles/C-Lab.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C-Lab.dir/flags.make
 
-CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj: ../demo/2019-10-25\ Tree/UnionFindTest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-10-25_Tree\UnionFindTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-10-25 Tree\UnionFindTest.c"
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: CMakeFiles/C-Lab.dir/flags.make
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/SearchingTest.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SearchingTest.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SearchingTest.c"
 
-CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-10-25 Tree\UnionFindTest.c" > CMakeFiles\C-Lab.dir\demo\2019-10-25_Tree\UnionFindTest.c.i
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SearchingTest.c" > CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SearchingTest.c.i
 
-CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-10-25 Tree\UnionFindTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-10-25_Tree\UnionFindTest.c.s
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SearchingTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SearchingTest.c.s
 
 # Object files for target C-Lab
 C__Lab_OBJECTS = \
-"CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj"
+"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj"
 
 # External object files for target C-Lab
 C__Lab_EXTERNAL_OBJECTS =
 
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj
+C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/build.make
 C-Lab.exe: CMakeFiles/C-Lab.dir/linklibs.rsp
 C-Lab.exe: CMakeFiles/C-Lab.dir/objects1.rsp

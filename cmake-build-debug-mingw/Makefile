@@ -122,32 +122,32 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
-demo/2019-10-25_Tree/UnionFindTest.obj: demo/2019-10-25_Tree/UnionFindTest.c.obj
+demo/2019-12-4_Searching/SearchingTest.obj: demo/2019-12-4_Searching/SearchingTest.c.obj
 
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.obj
+.PHONY : demo/2019-12-4_Searching/SearchingTest.obj
 
 # target to build an object file
-demo/2019-10-25_Tree/UnionFindTest.c.obj:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.obj
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.c.obj
+demo/2019-12-4_Searching/SearchingTest.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj
+.PHONY : demo/2019-12-4_Searching/SearchingTest.c.obj
 
-demo/2019-10-25_Tree/UnionFindTest.i: demo/2019-10-25_Tree/UnionFindTest.c.i
+demo/2019-12-4_Searching/SearchingTest.i: demo/2019-12-4_Searching/SearchingTest.c.i
 
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.i
+.PHONY : demo/2019-12-4_Searching/SearchingTest.i
 
 # target to preprocess a source file
-demo/2019-10-25_Tree/UnionFindTest.c.i:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.i
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.c.i
+demo/2019-12-4_Searching/SearchingTest.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.i
+.PHONY : demo/2019-12-4_Searching/SearchingTest.c.i
 
-demo/2019-10-25_Tree/UnionFindTest.s: demo/2019-10-25_Tree/UnionFindTest.c.s
+demo/2019-12-4_Searching/SearchingTest.s: demo/2019-12-4_Searching/SearchingTest.c.s
 
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.s
+.PHONY : demo/2019-12-4_Searching/SearchingTest.s
 
 # target to generate assembly for a file
-demo/2019-10-25_Tree/UnionFindTest.c.s:
-	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-10-25_Tree/UnionFindTest.c.s
-.PHONY : demo/2019-10-25_Tree/UnionFindTest.c.s
+demo/2019-12-4_Searching/SearchingTest.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s
+.PHONY : demo/2019-12-4_Searching/SearchingTest.c.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo/2019-10-25_Tree/UnionFindTest.obj
-	@echo ... demo/2019-10-25_Tree/UnionFindTest.i
-	@echo ... demo/2019-10-25_Tree/UnionFindTest.s
+	@echo ... demo/2019-12-4_Searching/SearchingTest.obj
+	@echo ... demo/2019-12-4_Searching/SearchingTest.i
+	@echo ... demo/2019-12-4_Searching/SearchingTest.s
 .PHONY : help
 
 

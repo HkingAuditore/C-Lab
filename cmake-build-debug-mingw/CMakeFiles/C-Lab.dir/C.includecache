@@ -6,37 +6,9 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeBase.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SearchingTest.c
 stdio.h
 -
 stdlib.h
 -
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeTraversal.h
-BinaryTreeBase.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeBase.h
-TreeBase.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/TreeBase.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/Forest.h
-BinaryTreeTraversal.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/BinaryTreeTraversal.h
-stdio.h
--
-stdlib.h
--
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/TreeBase.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/UnionFind.h
-Forest.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/Forest.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/UnionFindTest.c
-stdlib.h
--
-stdio.h
--
-UnionFind.h
-F:/CProgram/CLab/C-Lab/demo/2019-10-25 Tree/UnionFind.h
 
