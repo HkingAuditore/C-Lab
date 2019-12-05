@@ -149,6 +149,33 @@ demo/2019-12-4_Searching/SearchingTest.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s
 .PHONY : demo/2019-12-4_Searching/SearchingTest.c.s
 
+demo/2019-12-4_Searching/SimpleBinarySearchTree.obj: demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj
+
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.obj
+
+# target to build an object file
+demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj
+
+demo/2019-12-4_Searching/SimpleBinarySearchTree.i: demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i
+
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.i
+
+# target to preprocess a source file
+demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i
+
+demo/2019-12-4_Searching/SimpleBinarySearchTree.s: demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s
+
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.s
+
+# target to generate assembly for a file
+demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s
+.PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... demo/2019-12-4_Searching/SearchingTest.obj
 	@echo ... demo/2019-12-4_Searching/SearchingTest.i
 	@echo ... demo/2019-12-4_Searching/SearchingTest.s
+	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.obj
+	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.i
+	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.s
 .PHONY : help
 
 

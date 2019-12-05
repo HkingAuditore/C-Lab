@@ -6,9 +6,41 @@
 
 #IncludeRegexTransform: 
 
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/InputController.h
+OutputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
+
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
+
 F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SearchingTest.c
 stdio.h
 -
 stdlib.h
 -
+TreeBasic.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h
+InputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/InputController.h
+OutputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
+
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SimpleBinarySearchTree.c
+stdio.h
+-
+stdlib.h
+-
+TreeBasic.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h
+InputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/InputController.h
+OutputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
+
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h
+stdio.h
+-
+stdlib.h
+-
+OutputController.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
 
