@@ -122,6 +122,33 @@ C-Lab/fast:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/build
 .PHONY : C-Lab/fast
 
+demo/2019-12-4_Searching/BalancedBinaryTree.obj: demo/2019-12-4_Searching/BalancedBinaryTree.c.obj
+
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.obj
+
+# target to build an object file
+demo/2019-12-4_Searching/BalancedBinaryTree.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.c.obj
+
+demo/2019-12-4_Searching/BalancedBinaryTree.i: demo/2019-12-4_Searching/BalancedBinaryTree.c.i
+
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.i
+
+# target to preprocess a source file
+demo/2019-12-4_Searching/BalancedBinaryTree.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.i
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.c.i
+
+demo/2019-12-4_Searching/BalancedBinaryTree.s: demo/2019-12-4_Searching/BalancedBinaryTree.c.s
+
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.s
+
+# target to generate assembly for a file
+demo/2019-12-4_Searching/BalancedBinaryTree.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.s
+.PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.c.s
+
 demo/2019-12-4_Searching/SearchingTest.obj: demo/2019-12-4_Searching/SearchingTest.c.obj
 
 .PHONY : demo/2019-12-4_Searching/SearchingTest.obj
@@ -176,6 +203,33 @@ demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s
 .PHONY : demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s
 
+demo/2019-12-4_Searching/TreeBasic.obj: demo/2019-12-4_Searching/TreeBasic.c.obj
+
+.PHONY : demo/2019-12-4_Searching/TreeBasic.obj
+
+# target to build an object file
+demo/2019-12-4_Searching/TreeBasic.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj
+.PHONY : demo/2019-12-4_Searching/TreeBasic.c.obj
+
+demo/2019-12-4_Searching/TreeBasic.i: demo/2019-12-4_Searching/TreeBasic.c.i
+
+.PHONY : demo/2019-12-4_Searching/TreeBasic.i
+
+# target to preprocess a source file
+demo/2019-12-4_Searching/TreeBasic.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.i
+.PHONY : demo/2019-12-4_Searching/TreeBasic.c.i
+
+demo/2019-12-4_Searching/TreeBasic.s: demo/2019-12-4_Searching/TreeBasic.c.s
+
+.PHONY : demo/2019-12-4_Searching/TreeBasic.s
+
+# target to generate assembly for a file
+demo/2019-12-4_Searching/TreeBasic.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.s
+.PHONY : demo/2019-12-4_Searching/TreeBasic.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +239,18 @@ help:
 	@echo ... C-Lab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.obj
+	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.i
+	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.s
 	@echo ... demo/2019-12-4_Searching/SearchingTest.obj
 	@echo ... demo/2019-12-4_Searching/SearchingTest.i
 	@echo ... demo/2019-12-4_Searching/SearchingTest.s
 	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.obj
 	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.i
 	@echo ... demo/2019-12-4_Searching/SimpleBinarySearchTree.s
+	@echo ... demo/2019-12-4_Searching/TreeBasic.obj
+	@echo ... demo/2019-12-4_Searching/TreeBasic.i
+	@echo ... demo/2019-12-4_Searching/TreeBasic.s
 .PHONY : help
 
 

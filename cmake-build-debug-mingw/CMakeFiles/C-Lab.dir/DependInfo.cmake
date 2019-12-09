@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/BalancedBinaryTree.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj"
   "F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SearchingTest.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj"
   "F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SimpleBinarySearchTree.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj"
+  "F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.c" "F:/CProgram/CLab/C-Lab/cmake-build-debug-mingw/CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

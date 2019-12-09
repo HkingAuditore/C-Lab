@@ -9,236 +9,69 @@
 #include <stdlib.h>
 #include "OutputController.h"
 
-//Êı¾İÀàĞÍ
+//æ•°æ®ç±»å‹
 typedef int ElementType;
-//Î»ÖÃ
+//ä½ç½®
 typedef enum side {
-    noValid, left, right
+    NoValid, Left, Right
 } Side;
-//½áµã
+//ç»“ç‚¹
 typedef struct treeNode {
     ElementType Data;
     struct treeNode *LeftChild, *RightChild, *Parent;
+    int BalanceFactor;
+    int Height;
 } TreeNode;
-//Ê÷
+//æ ‘
 typedef struct tree {
     TreeNode *Root;
     int NumOfNodes;
 } Tree;
-//Ğı×ª·½Ïò
+//æ—‹è½¬æ–¹å‘
 typedef enum direction {
-    turnLeft, turnRight
+    TurnLeft, TurnRight
 } Direction;
+typedef enum traversalMode {
+    /*å‰åº*/
+            DLR,
+    /*ä¸­åº*/
+            LDR,
+    /*ååº*/
+            LRD
+} TraversalMode;
 
+//ç”ŸæˆèŠ‚ç‚¹
+static TreeNode *GenerateNode(ElementType _rootData);
 
-//Éú³É½Úµã
-static TreeNode *GenerateNode(ElementType _rootData) {
-    TreeNode *leaf = (TreeNode *) malloc(1 * sizeof(TreeNode));
-    if (leaf) {
-//      ³õÊ¼»¯
-        leaf->Data = _rootData;
-        leaf->LeftChild = leaf->RightChild = leaf->Parent = NULL;
-    }
-    return leaf;
-}
+//ç”Ÿæˆåˆå§‹æ ‘
+static Tree *GenerateTree(ElementType _rootData);
 
-//Éú³É³õÊ¼Ê÷
-static Tree *GenerateTree(ElementType _rootData) {
-    Tree *tree = (Tree *) malloc(1 * sizeof(Tree));
-    if (tree) {
-        tree->Root = GenerateNode(_rootData);
-    }
-    tree->NumOfNodes=0;
-    return tree;
-}
+//ç»™å·²çŸ¥èŠ‚ç‚¹åŠ å…¥å¶å­
+static int AppendLeaf(TreeNode *_target, TreeNode *_leaf, Side _side);
 
-//¸øÒÑÖª½Úµã¼ÓÈëÒ¶×Ó
-static int AppendLeaf(TreeNode *_target, TreeNode *_leaf, Side _side) {
-    _leaf->Parent = _target;
-    if (_side == left) {
-        _target->LeftChild = _leaf;
-    } else if (_side == right) {
-        _target->RightChild = _leaf;
-    } else {
-        return 0;
-    }
-    return 1;
-}
+//è·å–ç©ºé—²ä½ç½®
+static Side GetValidSide(TreeNode *_node);
 
-//»ñÈ¡¿ÕÏĞÎ»ÖÃ
-static Side GetValidSide(TreeNode *_node) {
-    if (!_node->LeftChild) {
-        return left;
-    } else if (!_node->RightChild) {
-        return right;
-    } else {
-        return noValid;
-    }
-}
+//å¯¹äºæŸ¥æ‰¾æ ‘ï¼Œæ ¹æ®å¤§å°è¿”å›ä½ç½®
+static Side GetComparedSide(TreeNode *_node, TreeNode *_follow);
 
+//è·å–æ ¹æ®å¤§å°å¾—å‡ºçš„æ–°èŠ‚ç‚¹åœ¨æŸ¥æ‰¾æ ‘ä¸­çš„åˆé€‚ä½ç½®
+static TreeNode *GetValidPosition(Tree *_tree, TreeNode *_node);
 
+//éå†æ ‘
+static int TraversalTree(const Tree *_tree, TraversalMode _mode, void(*_function)(TreeNode *));
 
-//¶ÔÓÚ²éÕÒÊ÷£¬¸ù¾İ´óĞ¡·µ»ØÎ»ÖÃ
-static Side GetComparedSide(TreeNode *_node, TreeNode *_follow) {
-    if (_follow->Data > _node->Data) {
-        return right;
-    } else {
-        return left;
-    }
-}
-//»ñÈ¡¸ù¾İ´óĞ¡µÃ³öµÄĞÂ½ÚµãÔÚ²éÕÒÊ÷ÖĞµÄºÏÊÊÎ»ÖÃ
-static TreeNode* GetValidPosition(Tree* _tree,TreeNode* _node){
-    TreeNode* _position=_tree->Root;
-    Side side;
-    while (_position){
-        side = GetComparedSide(_position,_node);
-        if(side == left){
-            if(_position->LeftChild){
-                _position = _position->LeftChild;
-                continue;
-            }else{
-                return _position;
-            }
-        }else{
-            if(_position->RightChild){
-                _position=_position->RightChild;
-                continue;
-            }else{
-                return _position;
-            }
-        }
-    }
-}
+//æ—‹è½¬PivotèŠ‚ç‚¹
+static int RotateNode(TreeNode *_pivot, Direction _dir, Tree *_tree);
 
-//½«½Úµã×óĞı
-static int RotateNodeLeft(TreeNode *_pivot) {
-    Side pivotSide = _pivot->Parent->LeftChild == _pivot ? left : right;
-    if (pivotSide == left) {
-        _pivot->Parent->LeftChild = _pivot->RightChild;
-    } else {
-        _pivot->Parent->RightChild = _pivot->RightChild;
-    }
-    _pivot->Parent = _pivot->RightChild;
-    _pivot->RightChild = _pivot->RightChild->LeftChild;
-    _pivot->Parent->LeftChild = _pivot;
-    return 1;
-}
+//è¾“å‡ºç»“ç‚¹
+static void WriteNode(TreeNode *_node);
 
-//½«½ÚµãÓÒĞı
-static int RotateNodeRight(TreeNode *_pivot) {
-    Side pivotSide = _pivot->Parent->LeftChild == _pivot ? left : right;
-    if (pivotSide == left) {
-        _pivot->Parent->LeftChild = _pivot->RightChild;
-    } else {
-        _pivot->Parent->RightChild = _pivot->RightChild;
-    }
-    _pivot->Parent = _pivot->LeftChild;
-    _pivot->LeftChild = _pivot->LeftChild->RightChild;
-    _pivot->Parent->RightChild = _pivot;
-    return 1;
-}
+//ç»“ç‚¹é«˜åº¦è®¡ç®—
+static void NodeHeightCalculator(TreeNode *_node);
 
-//Ğı×ªPivot½Úµã
-static int RotateNode(TreeNode *_pivot, Direction _dir) {
-    if (_dir == turnLeft) {
-        RotateNodeLeft(_pivot);
-    } else if (_dir == turnRight){
-        RotateNodeRight(_pivot);
-    }else{
-        return 0;
-    }
-    return 1;
-}
-
-
-
-//´¦Àí½Úµã
-static ElementType OutputNode(const TreeNode *_node) {
-    WriteData(_node->Data);
-    return _node->Data;
-}
-
-//±éÀú·½Ê½
-typedef enum traversalMode{
-    DLR,LDR,LRD
-}TraversalMode;
-
-
-/*****************Ç°Ğò±éÀú*****************/
-
-
-//Ç°Ğò±éÀú½Úµã
-static void TraversalNodeDLR(const TreeNode *_node) {
-    if(_node){
-        OutputNode(_node);
-        TraversalNodeDLR(_node->LeftChild);
-        TraversalNodeDLR(_node->RightChild);
-    }
-}
-
-//Ç°Ğò±éÀúÊ÷
-static void TraversalDLR(const Tree* _tree){
-    if(_tree && _tree->Root){
-       TraversalNodeDLR(_tree->Root);
-    }
-}
-
-/*****************Ç°Ğò±éÀú*****************/
-
-/*****************ÖĞĞò±éÀú*****************/
-//ÖĞĞò±éÀú½Úµã
-static void TraversalNodeLDR(const TreeNode *_node) {
-    if(_node){
-        TraversalNodeDLR(_node->LeftChild);
-        OutputNode(_node);
-        TraversalNodeDLR(_node->RightChild);
-    }
-}
-
-//ÖĞĞò±éÀúÊ÷
-static void TraversalLDR(const Tree* _tree){
-    if(_tree && _tree->Root){
-        TraversalNodeDLR(_tree->Root);
-    }
-}
-/*****************ÖĞĞò±éÀú*****************/
-
-
-/*****************ºóĞò±éÀú*****************/
-//ÖĞĞò±éÀú½Úµã
-static void TraversalNodeLRD(const TreeNode *_node) {
-    if(_node){
-        TraversalNodeDLR(_node->LeftChild);
-        TraversalNodeDLR(_node->RightChild);
-        OutputNode(_node);
-    }
-}
-
-//ÖĞĞò±éÀúÊ÷
-static void TraversalLRD(const Tree* _tree){
-    if(_tree && _tree->Root){
-        TraversalNodeDLR(_tree->Root);
-    }
-}
-/*****************ºóĞò±éÀú*****************/
-
-//±éÀúÊ÷
-static int TraversalTree(const Tree *_tree,TraversalMode _mode){
-    WriteTraversalTip(_mode);
-    switch (_mode){
-        case DLR:
-            TraversalDLR(_tree);
-            return 1;
-        case LDR:
-            TraversalLDR(_tree);
-            return 1;
-        case LRD:
-            TraversalLRD(_tree);
-            return 1;
-        default:
-            return 0;
-    }
-    SwitchLine();
-}
+//ç»“ç‚¹ä¿¡æ¯è¾“å‡º
+static void NodeInfoOutput(TreeNode *_node);
 
 #endif //C_LAB_TREEBASIC_H
+

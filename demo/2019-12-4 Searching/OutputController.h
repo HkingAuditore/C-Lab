@@ -13,9 +13,12 @@ static void SwitchLine(){
     printf("\n");
 }
 
+static void Write(char* _string){
+    printf("%s",_string);
+}
 
-static void WriteData(int _data){
-    printf("%d ",_data);
+static void WriteData(char* _string,int _data){
+    printf("%s:%d ",_string,_data);
 }
 
 static void WriteTraversalTip(int _mode){

@@ -12,6 +12,7 @@ typedef enum inputMode{
     keyboard,file
 }InputMode;
 
+//∂¡»°
 static int Read(InputMode _mode){
     if(_mode == 0){
         int result;

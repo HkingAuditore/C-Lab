@@ -74,10 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/BalancedBinaryTree.c">
+			<Option target="C-Lab"/>
+		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SearchingTest.c">
 			<Option target="C-Lab"/>
 		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SimpleBinarySearchTree.c">
+			<Option target="C-Lab"/>
+		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.c">
+			<Option target="C-Lab"/>
+		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h">
 			<Option target="C-Lab"/>
 		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/CMakeLists.txt">

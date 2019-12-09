@@ -6,9 +6,13 @@
     <file url="file://$PROJECT_DIR$/demo/2019-10-25 Tree/Forest.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/demo/2019-10-25 Tree/TreeTest.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/demo/2019-10-25 Tree/UnionFind.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/BalancedBinaryTree.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/InputController.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/OutputController.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/SearchingTest.c" charset="GBK" />
     <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/SimpleBinarySearchTree.c" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/TreeBasic.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/TreeBasic.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/2019-12-4 Searching/TreeBasic.h" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

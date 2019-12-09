@@ -19,7 +19,7 @@ Tree *GenerateSimpleSearchTree() {
 
         TreeNode *node = GenerateNode(data);
         TreeNode *validPos = GetValidPosition(tree, node);
-        if (GetComparedSide(validPos, node)==left) {
+        if (GetComparedSide(validPos, node) == Left) {
             validPos->LeftChild=node;
         }else{
             validPos->RightChild=node;
