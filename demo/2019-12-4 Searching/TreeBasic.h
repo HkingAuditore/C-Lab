@@ -59,7 +59,7 @@ static Side GetComparedSide(TreeNode *_node, TreeNode *_follow);
 static TreeNode *GetValidPosition(Tree *_tree, TreeNode *_node);
 
 //遍历树
-static int TraversalTree(const Tree *_tree, TraversalMode _mode, void(*_function)(TreeNode *));
+static int TraversalTree(const Tree *_tree, TraversalMode _mode,void(*_function)(TreeNode *));
 
 //旋转Pivot节点
 static int RotateNode(TreeNode *_pivot, Direction _dir, Tree *_tree);
