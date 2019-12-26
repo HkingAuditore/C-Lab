@@ -3,4 +3,4 @@ project(C-Lab C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_BUILD_TYPE Debug)
-add_executable(C-Lab "demo/2019-12-4 Searching/SearchingTest.c" "demo/2019-12-4 Searching/SimpleBinarySearchTree.c" "demo/2019-12-4 Searching/BalancedBinaryTree.c" "demo/2019-12-4 Searching/TreeBasic.c")
+add_executable(C-Lab "demo/2019-12-4 Searching/SearchingTest.c" "demo/2019-12-4 Searching/SimpleBinarySearchTree.c" "demo/2019-12-4 Searching/BalancedBinaryTree.c" "demo/2019-12-4 Searching/TreeBasic.c" )

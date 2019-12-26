@@ -9,7 +9,7 @@
 #include "OutputController.h"
 
 typedef enum inputMode{
-    keyboard,file
+    Keyboard,File
 }InputMode;
 
 //∂¡»°

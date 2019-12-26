@@ -6,27 +6,9 @@
 
 #IncludeRegexTransform: 
 
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/BalancedBinaryTree.c
-TreeBasic.h
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h
-stdio.h
--
-stdlib.h
--
-InputController.h
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/InputController.h
-math.h
--
-OutputController.h
 F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
 
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/InputController.h
-OutputController.h
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/OutputController.h
-
-F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.h
+F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/TreeBasic.c
 stdio.h
 -
 stdlib.h

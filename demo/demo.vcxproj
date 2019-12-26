@@ -19,10 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2019-10-12 String\KMPTest.c" />
+    <ClInclude Include="2019-12-4 Searching\BalancedBinaryTree.h" />
+    <ClInclude Include="2019-12-4 Searching\InputController.h" />
+    <ClInclude Include="2019-12-4 Searching\OutputController.h" />
+    <ClInclude Include="2019-12-4 Searching\RedBlackTree.h" />
+    <ClInclude Include="2019-12-4 Searching\TreeBasic.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2019-10-12 String\String.h" />
+    <ClCompile Include="2019-12-4 Searching\BalancedBinaryTree.c" />
+    <ClCompile Include="2019-12-4 Searching\RedBlackTree.c" />
+    <ClCompile Include="2019-12-4 Searching\SearchingTest.c" />
+    <ClCompile Include="2019-12-4 Searching\TreeBasic.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

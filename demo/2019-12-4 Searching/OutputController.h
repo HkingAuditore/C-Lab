@@ -33,7 +33,7 @@ static void WriteTraversalTip(int _mode){
             printf("后序遍历是：\n");
             break;
         default:
-            printf("没有这种便利方式\n");
+            printf("没有这种遍历方式\n");
             break;
     }
 }

@@ -49,25 +49,25 @@ void ChangeSideChild(TreeNode *_target, Side _side, TreeNode *_newChild) {
 }
 
 //LL情况
-void LLProcess(TreeNode *_pivot, Tree *_tree) {
-    RotateNode(_pivot, TurnRight, _tree);
+void LLProcess(TreeNode *_pivot, Tree *_tree, TreeNode* _crition) {
+    RotateNode(_pivot, TurnRight, _tree, _crition);
 }
 
 //RR情况
-void RRProcess(TreeNode *_pivot, Tree *_tree) {
-    RotateNode(_pivot, TurnLeft, _tree);
+void RRProcess(TreeNode *_pivot, Tree *_tree, TreeNode* _crition) {
+    RotateNode(_pivot, TurnLeft, _tree, _crition);
 }
 
 //LR情况
-void LRProcess(TreeNode *_pivot, Tree *_tree) {
-    RotateNode(_pivot->LeftChild, TurnLeft, _tree);
-    RotateNode(_pivot, TurnRight, _tree);
+void LRProcess(TreeNode *_pivot, Tree *_tree, TreeNode* _crition) {
+    RotateNode(_pivot->LeftChild, TurnLeft, _tree, _crition);
+    RotateNode(_pivot, TurnRight, _tree, _crition);
 }
 
 //RL情况
-void RLProcess(TreeNode *_pivot, Tree *_tree) {
-    RotateNode(_pivot->RightChild, TurnRight, _tree);
-    RotateNode(_pivot, TurnLeft, _tree);
+void RLProcess(TreeNode *_pivot, Tree *_tree, TreeNode* _crition) {
+    RotateNode(_pivot->RightChild, TurnRight, _tree, _crition);
+    RotateNode(_pivot, TurnLeft, _tree, _crition);
 }
 
 //判断情形
@@ -95,20 +95,20 @@ UnbalanceType GetUnbalanceType(TreeNode *_node) {
 }
 
 //根据情形调整平衡
-void StabilizeNode(UnbalanceType _type, TreeNode *_node, Tree *_tree) {
+void StabilizeNode(UnbalanceType _type, TreeNode *_node, Tree *_tree,TreeNode* _crition) {
 //    printf("in stabilize!\n");
     switch (_type) {
         case LL:
-            LLProcess(_node, _tree);
+            LLProcess(_node, _tree, _crition);
             break;
         case RR:
-            RRProcess(_node, _tree);
+            RRProcess(_node, _tree, _crition);
             break;
         case LR:
-            LRProcess(_node, _tree);
+            LRProcess(_node, _tree, _crition);
             break;
         case RL:
-            RLProcess(_node, _tree);
+            RLProcess(_node, _tree, _crition);
             break;
         default:
             break;
@@ -125,7 +125,7 @@ void BalanceRefresh(TreeNode *_node) {
 
 //更新平衡
 //Delete
-void BalanceUpdateDelete(TreeNode *_node, Tree *_tree, Side _side) {
+void BalanceUpdateDelete(TreeNode *_node, Tree *_tree, Side _side,TreeNode* _crition) {
     TreeNode *curNode = _node;
     Side curSide = _side;
     while (curNode) {
@@ -146,17 +146,17 @@ void BalanceUpdateDelete(TreeNode *_node, Tree *_tree, Side _side) {
         if (abs(curNode->BalanceFactor) >= 2) {
 //            printf("Unbalance!\n");
             printf("结点%d不平衡！平衡度为：%d\n", curNode->Data, curNode->BalanceFactor);
-            StabilizeNode(GetUnbalanceType(curNode), curNode, _tree);
+            StabilizeNode(GetUnbalanceType(curNode), curNode, _tree, _crition);
 //            printf("Balanced!\n");
-            TraversalTree(_tree, LRD, NodeHeightCalculator);
-            TraversalTree(_tree, LRD, BalanceRefresh);
+            TraversalTree(_tree, NULL, LRD, NodeHeightCalculator);
+            TraversalTree(_tree, NULL, LRD, BalanceRefresh);
         }
         curNode = curNode->Parent;
     }
 }
 
 //ADD
-void BalanceUpdateAdd(TreeNode *_node, Tree *_tree) {
+void BalanceUpdateAdd(TreeNode *_node, Tree *_tree,TreeNode* _crition) {
     TreeNode *curNode = _node;
     while (curNode->Parent) {
         if (GetChildSide(curNode->Parent, curNode) == Left) {
@@ -171,30 +171,33 @@ void BalanceUpdateAdd(TreeNode *_node, Tree *_tree) {
         if (abs(curNode->BalanceFactor) >= 2) {
 //            printf("Unbalance!\n");
             printf("结点%d不平衡！平衡度为：%d\n", curNode->Data, curNode->BalanceFactor);
-            StabilizeNode(GetUnbalanceType(curNode), curNode, _tree);
+            StabilizeNode(GetUnbalanceType(curNode), curNode, _tree, _crition);
 //            printf("Balanced!\n");
-            TraversalTree(_tree, LRD, NodeHeightCalculator);
-            TraversalTree(_tree, LRD, BalanceRefresh);
+            TraversalTree(_tree,NULL, LRD, NodeHeightCalculator);
+            TraversalTree(_tree, NULL, LRD, BalanceRefresh);
+            printf("平衡后所得：：%d\n", curNode->Data, curNode->BalanceFactor);
+
+            TraversalTree(_tree, NULL, DLR, NodeInfoOutput);
         }
         curNode = curNode->Parent;
     }
 }
 
-void BalanceUpdate(TreeNode *_node, Tree *_tree, NodeProcess _process, Side _side) {
+void BalanceUpdate(TreeNode *_node, Tree *_tree, NodeProcess _process, Side _side,TreeNode* _crition) {
     if (_process == Add) {
-        BalanceUpdateAdd(_node, _tree);
+        BalanceUpdateAdd(_node, _tree, _crition);
     } else if (_process == Delete) {
-        BalanceUpdateDelete(_node, _tree, _side);
+        BalanceUpdateDelete(_node, _tree, _side, _crition);
     }
 }
 
-Tree *GenerateAVLTree() {
+Tree *GenerateAVLTree(TreeNode* _crition) {
 //    WriteInputTip();
 //    生成树
-    Tree *tree = GenerateTree(Read(keyboard));
+    Tree *tree = GenerateTree(Read(Keyboard));
     ElementType data;
 //    根据大小比较寻找位置
-    while ((data = Read(keyboard)) != EXITINPUT) {
+    while ((data = Read(Keyboard)) != EXITINPUT) {
 
         TreeNode *node = GenerateNode(data);
         TreeNode *validPos = GetValidPosition(tree, node);
@@ -205,7 +208,7 @@ Tree *GenerateAVLTree() {
         }
         node->Parent = validPos;
         tree->NumOfNodes++;
-        BalanceUpdate(node, tree, Add, NoValid);
+        BalanceUpdate(node, tree, Add, NoValid, _crition);
 
     }
     return tree;
@@ -225,8 +228,8 @@ TreeNode *SearchNode(ElementType _target, Tree *_tree) {
 }
 
 //删除完成后行为
-void DeleteDoneProcess(Tree *_tree, TreeNode *_deleteNode, Side _deleteSide) {
-    BalanceUpdate(_deleteNode, _tree, Delete, _deleteSide);
+void DeleteDoneProcess(Tree *_tree, TreeNode *_deleteNode, Side _deleteSide,TreeNode* _crition) {
+    BalanceUpdate(_deleteNode, _tree, Delete, _deleteSide, _crition);
 }
 
 //单个删除行为
@@ -260,7 +263,7 @@ void DeleteNodeProcess(TreeNode *_target, Side _parentSide, TreeNode *_newChild,
 
 
 //删除节点
-TreeNode *DeleteSingleNode(ElementType _target, Tree *_tree) {
+TreeNode *DeleteSingleNode(ElementType _target, Tree *_tree,TreeNode* _crition) {
     Write("in0\n");
     TreeNode *targetNode = SearchNode(_target, _tree);
     if (!targetNode) {
@@ -290,16 +293,16 @@ TreeNode *DeleteSingleNode(ElementType _target, Tree *_tree) {
     }
     Write("in2\n");
     TreeNode *newNode = GetSideChild(tempParent, parentSide);
-    TraversalTree(_tree, DLR, NodeInfoOutput);
-    DeleteDoneProcess(_tree, newNode, deleteSide);
+    TraversalTree(_tree, NULL, DLR, NodeInfoOutput);
+    DeleteDoneProcess(_tree, newNode, deleteSide, _crition);
     return newNode;
 }
 
-void DeleteNode(Tree *_tree) {
+void DeleteNode(Tree *_tree,TreeNode* _crition) {
     Write("删除节点：\n");
     ElementType data;
-    while ((data = Read(keyboard)) != EXITINPUT) {
-        DeleteSingleNode(data, _tree);
+    while ((data = Read(Keyboard)) != EXITINPUT) {
+        DeleteSingleNode(data, _tree, _crition);
     }
 }
 
