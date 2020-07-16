@@ -13,10 +13,9 @@
 #include "TreeBasic.h"
 #include "InputController.h"
 
-
 TreeNode* _NIL;
 
-typedef enum situation
+typedef enum situationInsert
 {
 	BlackFather,
 	RedFatherRedUncle,
@@ -24,14 +23,17 @@ typedef enum situation
 	RedFatherBlackUncle_Node_FatherSecond,
 	RedFatherBlackUncle_NodeSecondFatherFirst,
 	RedFatherBlackUncle_NodeFirstFatherSecond
-} Situation;
+} SituationInsert;
+
+typedef enum situationDelete
+{
+	/*NO CHILD*/
+	NoChild_Red, NoChild_Black_Root, NoChild_Black_NonRoot,
+	/*ONE CHILD*/
+	OneChild_Red, OneChild_Black
+} SituationDelete;
 
 TreeNode* GenerateNIL();
 Tree* GenerateRBTree();
-
-
-
-
-
 
 #endif //C_LAB_REDBLACKTREE_H

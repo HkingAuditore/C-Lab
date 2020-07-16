@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "C-Lab.exe.manifest"
   "C-Lab.pdb"
   "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj"
+  "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj"
   "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj"
   "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj"
   "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj"

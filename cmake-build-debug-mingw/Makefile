@@ -149,6 +149,33 @@ demo/2019-12-4_Searching/BalancedBinaryTree.c.s:
 	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.s
 .PHONY : demo/2019-12-4_Searching/BalancedBinaryTree.c.s
 
+demo/2019-12-4_Searching/RedBlackTree.obj: demo/2019-12-4_Searching/RedBlackTree.c.obj
+
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.obj
+
+# target to build an object file
+demo/2019-12-4_Searching/RedBlackTree.c.obj:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.c.obj
+
+demo/2019-12-4_Searching/RedBlackTree.i: demo/2019-12-4_Searching/RedBlackTree.c.i
+
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.i
+
+# target to preprocess a source file
+demo/2019-12-4_Searching/RedBlackTree.c.i:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.i
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.c.i
+
+demo/2019-12-4_Searching/RedBlackTree.s: demo/2019-12-4_Searching/RedBlackTree.c.s
+
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.s
+
+# target to generate assembly for a file
+demo/2019-12-4_Searching/RedBlackTree.c.s:
+	$(MAKE) -f CMakeFiles\C-Lab.dir\build.make CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.s
+.PHONY : demo/2019-12-4_Searching/RedBlackTree.c.s
+
 demo/2019-12-4_Searching/SearchingTest.obj: demo/2019-12-4_Searching/SearchingTest.c.obj
 
 .PHONY : demo/2019-12-4_Searching/SearchingTest.obj
@@ -242,6 +269,9 @@ help:
 	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.obj
 	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.i
 	@echo ... demo/2019-12-4_Searching/BalancedBinaryTree.s
+	@echo ... demo/2019-12-4_Searching/RedBlackTree.obj
+	@echo ... demo/2019-12-4_Searching/RedBlackTree.i
+	@echo ... demo/2019-12-4_Searching/RedBlackTree.s
 	@echo ... demo/2019-12-4_Searching/SearchingTest.obj
 	@echo ... demo/2019-12-4_Searching/SearchingTest.i
 	@echo ... demo/2019-12-4_Searching/SearchingTest.s

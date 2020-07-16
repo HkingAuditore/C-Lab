@@ -1,12 +1,31 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(demo.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  BalancedBinaryTree.c
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(158): warning C4013: “TraversalTree”未定义；假设外部返回 int
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(186): warning C4474: printf: 格式字符串中传递的参数太多
+  f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(186): note: 占位符和其参数预计 1 可变参数，但提供的却是 2 参数
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(206): warning C4013: “GenerateTree”未定义；假设外部返回 int
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(211): warning C4013: “GetValidPosition”未定义；假设外部返回 int
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(206): warning C4047: “初始化”:“Tree *”与“int”的间接级别不同
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\balancedbinarytree.c(211): warning C4047: “初始化”:“TreeNode *”与“int”的间接级别不同
   RedBlackTree.c
 f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(97): warning C4013: “GenerateTree”未定义；假设外部返回 int
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(97): warning C4047: “初始化”:“Tree *”与“int”的间接级别不同
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(236): warning C4013: “GetValidPosition”未定义；假设外部返回 int
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(236): warning C4047: “初始化”:“TreeNode *”与“int”的间接级别不同
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(33): warning C4716: “GenerateNIL”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(91): warning C4715: “GetValidPosition_RBTree”: 不是所有的控件路径都返回值
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(248): warning C4716: “InsertNode”: 必须返回一个值
-f:\cprogram\clab\c-lab\demo\2019-12-4 searching\inputcontroller.h(32): warning C4715: “Read”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(100): warning C4013: “GenerateTree”未定义；假设外部返回 int
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(100): warning C4047: “初始化”:“Tree *”与“int”的间接级别不同
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(226): warning C4013: “GetValidPosition”未定义；假设外部返回 int
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(226): warning C4047: “初始化”:“TreeNode *”与“int”的间接级别不同
+  SearchingTest.c
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\searchingtest.c(24): warning C4013: “TraversalTree”未定义；假设外部返回 int
+  TreeBasic.c
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.c(283): warning C4090: “函数”: 不同的“const”限定符
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.c(307): warning C4090: “函数”: 不同的“const”限定符
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.c(331): warning C4090: “函数”: 不同的“const”限定符
+  正在生成代码...
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\treebasic.c(170): warning C4715: “GetValidPosition”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(38): warning C4716: “GenerateNIL”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(95): warning C4715: “GetValidPosition_RBTree”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\redblacktree.c(238): warning C4716: “InsertNode”: 必须返回一个值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\inputcontroller.h(29): warning C4715: “Read”: 不是所有的控件路径都返回值
+f:\cprogram\clab\c-lab\demo\2019-12-4 searching\inputcontroller.h(29): warning C4715: “Read”: 不是所有的控件路径都返回值
   demo.vcxproj -> F:\CProgram\CLab\C-Lab\Debug\CLab.exe

@@ -8,35 +8,24 @@
 
 #include "OutputController.h"
 
-typedef enum inputMode{
-    Keyboard,File
+typedef enum inputMode {
+	Keyboard, File
 }InputMode;
 
 //∂¡»°
-static int Read(InputMode _mode){
-    if(_mode == 0){
-        int result;
-        WriteInputTip();
-        if(scanf("%d",&result)){
-            getchar();
-            return result;
-        }else{
-            getchar();
-            return EXITINPUT;
-        }
-
-
-
-
-    }
+static int Read(InputMode _mode) {
+	if (_mode == 0) {
+		int result;
+		WriteInputTip();
+		if (scanf("%d", &result)) {
+			getchar();
+			return result;
+		}
+		else {
+			getchar();
+			return EXITINPUT;
+		}
+	}
 }
-
-
-
-
-
-
-
-
 
 #endif //C_LAB_INPUTCONTROLLER_H

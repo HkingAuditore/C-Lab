@@ -6,8 +6,16 @@ CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj: ../demo/
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj: ../demo/2019-12-4\ Searching/OutputController.h
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj: ../demo/2019-12-4\ Searching/TreeBasic.h
 
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/BalancedBinaryTree.h
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/InputController.h
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/OutputController.h
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/RedBlackTree.c
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/TreeBasic.h
+
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/BalancedBinaryTree.h
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/InputController.h
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/OutputController.h
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/RedBlackTree.h
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/SearchingTest.c
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj: ../demo/2019-12-4\ Searching/TreeBasic.h
 

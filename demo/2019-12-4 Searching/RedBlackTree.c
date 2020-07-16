@@ -6,10 +6,9 @@
 #include "TreeBasic.h"
 #include "InputController.h"
 
-
 TreeNode* _NIL;
 
-typedef enum situation
+typedef enum situationInsert
 {
 	BlackFather,
 	RedFatherRedUncle,
@@ -17,13 +16,19 @@ typedef enum situation
 	RedFatherBlackUncle_Node_FatherSecond,
 	RedFatherBlackUncle_NodeSecondFatherFirst,
 	RedFatherBlackUncle_NodeFirstFatherSecond
-} Situation;
+} SituationInsert;
 
+typedef enum situationDelete
+{
+	/*NO CHILD*/
+	NoChild_Red, NoChild_Black_Root, NoChild_Black_NonRoot,
+	/*ONE CHILD*/
+	OneChild_Red, OneChild_Black
+} SituationDelete;
 
-Situation JudgeInsertSituation(TreeNode* _node);
-void Stablize_BRTree(TreeNode* _node, Situation _situation, Tree* _tree);
+SituationInsert JudgeInsertSituation(TreeNode* _node);
+void Stablize_BRTree(TreeNode* _node, SituationInsert _situation, Tree* _tree);
 TreeNode* InsertNode(Tree* _tree, ElementType _data);
-
 
 // 生成哨兵节点
 TreeNode* GenerateNIL()
@@ -31,7 +36,6 @@ TreeNode* GenerateNIL()
 	_NIL = GenerateNode(-2565);
 	_NIL->Color = Black;
 }
-
 
 // 生成红黑树新节点
 TreeNode* GenerateRBTreeNode(ElementType _data)
@@ -90,39 +94,26 @@ TreeNode* GetValidPosition_RBTree(Tree* _tree, TreeNode* _node)
 	}
 }
 
-
 // 生成红黑树
 Tree* GenerateRBTree()
 {
 	Tree* tree = GenerateTree(Read(Keyboard));
-	tree->Root->LeftChild=tree->Root->RightChild=_NIL;
+	tree->Root->LeftChild = tree->Root->RightChild = _NIL;
 	tree->IsRBTree = 1;
 	tree->Root->Color = Black;
-	tree->Root->Parent=_NIL;
+	tree->Root->Parent = _NIL;
 	ElementType data;
 	while ((data = Read(Keyboard)) != EXITINPUT)
 	{
-		// TreeNode* node = GenerateRBTreeNode(data);
-		// TreeNode* validPos = GetValidPosition_RBTree(tree, node);
-		// if (GetComparedSide_RBTree(validPos, node) == Left)
-		// {
-		// 	validPos->LeftChild = node;
-		// }
-		// else
-		// {
-		// 	validPos->RightChild = node;
-		// }
-		// node->Parent = validPos;
-		// tree->NumOfNodes++;
-		// Stablize_BRTree(node, JudgeInsertSituation(node), tree);
 		InsertNode(tree, data);
 	}
 	return tree;
 }
 
 // 旋转
-void Stablize_BRTree(TreeNode* _node, Situation _situation, Tree* _tree)
+void Stablize_BRTree(TreeNode* _node, SituationInsert _situation, Tree* _tree)
 {
+	
 	if (_node == _tree->Root)
 	{
 		if (_node->Color != Black)
@@ -149,9 +140,9 @@ void Stablize_BRTree(TreeNode* _node, Situation _situation, Tree* _tree)
 		}
 		break;
 		//// 红父黑叔////
-		// 皆为长子	
+		// 皆为长子
 	case RedFatherBlackUncle_Node_FatherFirst:
-		StabilizeNode(LL, _node->Parent->Parent,_tree,_NIL);
+		StabilizeNode(LL, _node->Parent->Parent, _tree, _NIL);
 		_node->Parent->Color = Black;
 		_node->Parent->RightChild->Color = Red;
 		break;
@@ -179,7 +170,7 @@ void Stablize_BRTree(TreeNode* _node, Situation _situation, Tree* _tree)
 }
 
 // 判断插入情形
-Situation JudgeInsertSituation(TreeNode* _node)
+SituationInsert JudgeInsertSituation(TreeNode* _node)
 {
 	printf("%d:", _node->Data);
 	if (_node->Parent->Color == Black)
@@ -233,7 +224,7 @@ Situation JudgeInsertSituation(TreeNode* _node)
 TreeNode* InsertNode(Tree* _tree, ElementType _data)
 {
 	TreeNode* node = GenerateRBTreeNode(_data);
-	TreeNode* validPos = GetValidPosition(_tree, node,_NIL);
+	TreeNode* validPos = GetValidPosition(_tree, node, _NIL);
 	if (GetComparedSide(validPos, node) == Left)
 	{
 		validPos->LeftChild = node;
@@ -244,13 +235,14 @@ TreeNode* InsertNode(Tree* _tree, ElementType _data)
 	}
 	node->Parent = validPos;
 	_tree->NumOfNodes++;
-	Stablize_BRTree(node,JudgeInsertSituation(node),_tree);
+	Stablize_BRTree(node, JudgeInsertSituation(node), _tree);
+	return node;
 }
-
 
 // 计算黑高
 int CountBlackHeight(TreeNode* _node)
 {
+	
 	int left = _node->LeftChild->BlackHeight + (_node->LeftChild->Color == Black ? 1 : 0);
 	int right = _node->RightChild->BlackHeight + (_node->RightChild->Color == Black ? 1 : 0);
 	if (left != right)
@@ -262,5 +254,6 @@ int CountBlackHeight(TreeNode* _node)
 	{
 		_node->BlackHeight = left;
 		return left;
+		
 	}
 }

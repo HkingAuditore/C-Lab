@@ -77,6 +77,15 @@
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/BalancedBinaryTree.c">
 			<Option target="C-Lab"/>
 		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/BalancedBinaryTree.h">
+			<Option target="C-Lab"/>
+		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/RedBlackTree.c">
+			<Option target="C-Lab"/>
+		</Unit>
+		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/RedBlackTree.h">
+			<Option target="C-Lab"/>
+		</Unit>
 		<Unit filename="F:/CProgram/CLab/C-Lab/demo/2019-12-4 Searching/SearchingTest.c">
 			<Option target="C-Lab"/>
 		</Unit>

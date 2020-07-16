@@ -69,18 +69,18 @@ CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SearchingTest.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SearchingTest.c.s
 
-CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj: CMakeFiles/C-Lab.dir/flags.make
-CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj: ../demo/2019-12-4\ Searching/SimpleBinarySearchTree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c"
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: CMakeFiles/C-Lab.dir/flags.make
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj: ../demo/2019-12-4\ Searching/RedBlackTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\RedBlackTree.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\RedBlackTree.c"
 
-CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c" > CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.i
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\RedBlackTree.c" > CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\RedBlackTree.c.i
 
-CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.s
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\RedBlackTree.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\RedBlackTree.c.s
 
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj: CMakeFiles/C-Lab.dir/flags.make
 CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj: ../demo/2019-12-4\ Searching/BalancedBinaryTree.c
@@ -108,25 +108,40 @@ CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\TreeBasic.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\TreeBasic.c.s
 
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj: CMakeFiles/C-Lab.dir/flags.make
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj: ../demo/2019-12-4\ Searching/SimpleBinarySearchTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.obj   -c "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c"
+
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c" > CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.i
+
+CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "F:\CProgram\CLab\C-Lab\demo\2019-12-4 Searching\SimpleBinarySearchTree.c" -o CMakeFiles\C-Lab.dir\demo\2019-12-4_Searching\SimpleBinarySearchTree.c.s
+
 # Object files for target C-Lab
 C__Lab_OBJECTS = \
 "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj" \
+"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj" \
 "CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj" \
-"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj"
+"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj" \
+"CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj"
 
 # External object files for target C-Lab
 C__Lab_EXTERNAL_OBJECTS =
 
 C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SearchingTest.c.obj
-C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj
+C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/RedBlackTree.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/BalancedBinaryTree.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/TreeBasic.c.obj
+C-Lab.exe: CMakeFiles/C-Lab.dir/demo/2019-12-4_Searching/SimpleBinarySearchTree.c.obj
 C-Lab.exe: CMakeFiles/C-Lab.dir/build.make
 C-Lab.exe: CMakeFiles/C-Lab.dir/linklibs.rsp
 C-Lab.exe: CMakeFiles/C-Lab.dir/objects1.rsp
 C-Lab.exe: CMakeFiles/C-Lab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable C-Lab.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\CProgram\CLab\C-Lab\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable C-Lab.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\C-Lab.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

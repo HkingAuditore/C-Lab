@@ -135,11 +135,11 @@ Side GetComparedSide(TreeNode* _node, TreeNode* _follow)
 }
 
 //获取根据大小得出的新节点在查找树中的合适位置
-TreeNode* GetValidPosition(Tree* _tree, TreeNode* _node,TreeNode* _crition)
+TreeNode* GetValidPosition(Tree* _tree, TreeNode* _node, TreeNode* _crition)
 {
 	TreeNode* _position = _tree->Root;
 	Side side;
-	while (_position && _position!=_crition)
+	while (_position && _position != _crition)
 	{
 		side = GetComparedSide(_position, _node);
 		if (side == Left)
@@ -201,7 +201,7 @@ int RotateNodeLeft(TreeNode* _pivot, Tree* _tree, TreeNode* _crition)
 }
 
 //将节点右旋
-int RotateNodeRight(TreeNode* _pivot, Tree* _tree,TreeNode* _crition)
+int RotateNodeRight(TreeNode* _pivot, Tree* _tree, TreeNode* _crition)
 {
 	Side pivotSide = NoValid;
 	if (_pivot->Parent && _pivot->Parent != _crition)
@@ -222,7 +222,7 @@ int RotateNodeRight(TreeNode* _pivot, Tree* _tree,TreeNode* _crition)
 		_pivot->Parent->RightChild = _pivot->LeftChild;
 	}
 	_pivot->LeftChild->Parent = _pivot->Parent;
-	if (_pivot->LeftChild->RightChild && _pivot->LeftChild->RightChild!=_crition)
+	if (_pivot->LeftChild->RightChild && _pivot->LeftChild->RightChild != _crition)
 	{
 		_pivot->LeftChild->RightChild->Parent = _pivot;
 	}

@@ -11,17 +11,15 @@
 #include "RedBlackTree.h"
 #include "OutputController.h"
 
-
+//
 extern Tree *GenerateSimpleSearchTree();
 extern Tree *GenerateAVLTree();
 extern void DeleteNode(Tree *_tree);
-
-// extern TreeNode* _NIL;
+extern TreeNode* _NIL;
 
 int main() {
-    setbuf(stdout, 0);
+	setbuf(stdout, 0);
 	GenerateNIL();
-    Tree *tree = GenerateRBTree();
-    TraversalTree(tree, _NIL, DLR, NodeInfoOutput);
-
+	Tree *tree = GenerateRBTree();
+	TraversalTree(tree, _NIL, DLR, NodeInfoOutput);
 }
